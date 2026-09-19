@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# Heavy / derived eval artifacts containing copyrighted audio
+eval/*.m4a
+eval/*.wav
+eval/*.mp3
+eval/*_player.html
+
+# OS
+.DS_Store

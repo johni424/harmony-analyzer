@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Harmony analysis — FeK3c6XhiRg</title>
+<style>
+  body { font-family: -apple-system, 'Segoe UI', sans-serif; margin: 2rem; background: #101418; color: #e8e8e8; }
+  h1 { font-size: 1.4rem; }
+  .meta { color: #9ab; margin-bottom: 1rem; }
+  .timeline { position: relative; height: 260px; background: #1a2129; border-radius: 10px; overflow-x: auto; padding: 1rem; }
+  .lane { position: relative; height: 40px; margin: 6px 0; }
+  .chord { position: absolute; height: 38px; border-radius: 6px; background: #2b3a4a; color: #fff;
+           display: flex; flex-direction: column; align-items: center; justify-content: center;
+           font-size: 0.85rem; cursor: default; border: 1px solid #3d5166; overflow: hidden; }
+  .chord:hover { background: #3d5166; }
+  .chord .sym { font-weight: 700; }
+  .chord .rn { font-size: 0.7rem; color: #9fc3e8; }
+  .chord.inv { border-color: #e8a54b; box-shadow: 0 0 0 1px #e8a54b inset; }
+  .legend { color: #789; font-size: 0.8rem; margin-top: 0.5rem; }
+  #detail { margin-top: 1rem; padding: 0.75rem 1rem; background: #1a2129; border-radius: 8px; min-height: 2.2em; }
+  table { border-collapse: collapse; margin-top: 1rem; width: 100%; }
+  th, td { text-align: left; padding: 4px 10px; border-bottom: 1px solid #26303c; font-size: 0.85rem; }
+  th { color: #9ab; }
+</style>
+</head>
+<body>
+<h1>Harmony analysis — FeK3c6XhiRg</h1>
+<div class="meta">
+  Key: <strong>G major</strong> ·
+  235s · source: file ·
+  56 chords detected
+</div>
+<div class="timeline" id="timeline"></div>
+<div class="legend">Outlined blocks = inverted (slash) chords. Hover or click a block for details.</div>
+<div id="detail">Hover a chord for details.</div>
+<table id="tbl">
+  <tr><th>Start</th><th>End</th><th>Chord</th><th>Inversion</th><th>Roman</th><th>Effect</th></tr>
+</table>
+<script>
+const chords = [{"start": 0.0, "end": 5.108390022675737, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.25, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 5.108390022675737, "end": 10.379319727891156, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.08, "effect": "stepwise ascending bass line — builds momentum and lift", "extensions": []}, {"start": 10.379319727891156, "end": 18.506303854875284, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.07, "effect": "stepwise ascending bass line — builds momentum and lift", "extensions": []}, {"start": 18.506303854875284, "end": 19.342222222222222, "symbol": "D7", "roman": "V7", "inv": 0, "conf": 0.04, "effect": "dominant 7th — bluesy forward drive; stepwise ascending bass line — builds momentum and lift", "extensions": []}, {"start": 19.342222222222222, "end": 20.29424036281179, "symbol": "D#m", "roman": "bvi", "inv": 0, "conf": 0.02, "effect": "", "extensions": [2]}, {"start": 20.29424036281179, "end": 25.379410430839002, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.2, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 25.379410430839002, "end": 30.394920634920634, "symbol": "Bm", "roman": "iii", "inv": 0, "conf": 0.05, "effect": "", "extensions": []}, {"start": 30.394920634920634, "end": 33.877913832199546, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.09, "effect": "", "extensions": []}, {"start": 33.877913832199546, "end": 39.05596371882086, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.07, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 39.05596371882086, "end": 40.704580498866214, "symbol": "D#maj7", "roman": "bVImaj7", "inv": 0, "conf": 0.07, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 40.704580498866214, "end": 45.952290249433105, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.2, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 45.952290249433105, "end": 49.946122448979594, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.09, "effect": "", "extensions": []}, {"start": 49.946122448979594, "end": 51.24643990929705, "symbol": "B7", "roman": "III7", "inv": 0, "conf": 0.03, "effect": "dominant 7th — bluesy forward drive", "extensions": []}, {"start": 51.24643990929705, "end": 59.791383219954646, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.05, "effect": "", "extensions": []}, {"start": 59.791383219954646, "end": 61.486439909297054, "symbol": "D#maj7", "roman": "bVImaj7", "inv": 0, "conf": 0.06, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 61.486439909297054, "end": 66.73414965986395, "symbol": "G", "roman": "I", "inv": 0, "conf": 0.14, "effect": "", "extensions": []}, {"start": 66.73414965986395, "end": 72.28371882086168, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.11, "effect": "", "extensions": []}, {"start": 72.28371882086168, "end": 75.55773242630386, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.11, "effect": "pedal point on C — grounds the harmony while chords change", "extensions": []}, {"start": 75.55773242630386, "end": 79.85342403628118, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.07, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture); pedal point on C — grounds the harmony while chords change", "extensions": []}, {"start": 79.85342403628118, "end": 82.66303854875284, "symbol": "Csus4", "roman": "IVsus4", "inv": 0, "conf": 0.33, "effect": "suspended — floating, delays resolution; pedal point on C — grounds the harmony while chords change", "extensions": []}, {"start": 82.66303854875284, "end": 87.65532879818593, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.2, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 87.65532879818593, "end": 92.9726984126984, "symbol": "Bm", "roman": "iii", "inv": 0, "conf": 0.06, "effect": "", "extensions": []}, {"start": 92.9726984126984, "end": 98.15074829931973, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.1, "effect": "", "extensions": []}, {"start": 98.15074829931973, "end": 101.6801814058957, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.12, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 101.6801814058957, "end": 102.42321995464853, "symbol": "Dm7", "roman": "v7", "inv": 0, "conf": 0.05, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture); m7 color — mellow, restrained", "extensions": []}, {"start": 102.42321995464853, "end": 103.4681179138322, "symbol": "D#7", "roman": "bVI7", "inv": 0, "conf": 0.07, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture); dominant 7th — bluesy forward drive", "extensions": []}, {"start": 103.4681179138322, "end": 108.83192743764172, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.2, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 108.83192743764172, "end": 113.94031746031746, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.08, "effect": "", "extensions": []}, {"start": 113.94031746031746, "end": 123.4140589569161, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.06, "effect": "", "extensions": []}, {"start": 123.4140589569161, "end": 124.34285714285714, "symbol": "D#7", "roman": "bVI7", "inv": 0, "conf": 0.04, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture); dominant 7th — bluesy forward drive", "extensions": []}, {"start": 124.34285714285714, "end": 129.93886621315193, "symbol": "G", "roman": "I", "inv": 0, "conf": 0.14, "effect": "", "extensions": []}, {"start": 129.93886621315193, "end": 135.32589569161, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.09, "effect": "", "extensions": []}, {"start": 135.32589569161, "end": 140.17886621315193, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.09, "effect": "", "extensions": []}, {"start": 140.17886621315193, "end": 143.68507936507936, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.06, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 143.68507936507936, "end": 145.6819954648526, "symbol": "Fm6", "roman": "bvii6", "inv": 0, "conf": 0.05, "effect": "m6 — bittersweet minor color", "extensions": []}, {"start": 145.6819954648526, "end": 150.97614512471657, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.17, "effect": "maj7 color — warm, dreamy, jazz-inflected; harmony immediately retaken — ostinato-like reinforcement", "extensions": []}, {"start": 150.97614512471657, "end": 154.62167800453514, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.08, "effect": "", "extensions": []}, {"start": 154.62167800453514, "end": 156.2702947845805, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.15, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 156.2702947845805, "end": 158.52263038548753, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.11, "effect": "", "extensions": []}, {"start": 158.52263038548753, "end": 165.04743764172335, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.07, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 165.04743764172335, "end": 166.32453514739228, "symbol": "F7", "roman": "bVII7", "inv": 0, "conf": 0.05, "effect": "dominant 7th — bluesy forward drive", "extensions": []}, {"start": 166.32453514739228, "end": 170.89886621315193, "symbol": "G", "roman": "I", "inv": 0, "conf": 0.1, "effect": "", "extensions": []}, {"start": 170.89886621315193, "end": 176.51809523809524, "symbol": "B7", "roman": "III7", "inv": 0, "conf": 0.08, "effect": "dominant 7th — bluesy forward drive", "extensions": []}, {"start": 176.51809523809524, "end": 179.11873015873016, "symbol": "Am7", "roman": "ii7", "inv": 0, "conf": 0.11, "effect": "m7 color — mellow, restrained", "extensions": []}, {"start": 179.11873015873016, "end": 187.01351473922904, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.15, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 187.01351473922904, "end": 192.19156462585033, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.24, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 192.19156462585033, "end": 195.92997732426304, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.09, "effect": "", "extensions": []}, {"start": 195.92997732426304, "end": 197.13741496598638, "symbol": "B7", "roman": "III7", "inv": 0, "conf": 0.05, "effect": "dominant 7th — bluesy forward drive", "extensions": []}, {"start": 197.13741496598638, "end": 207.65605442176872, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.08, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 207.65605442176872, "end": 212.50902494331066, "symbol": "Gmaj7", "roman": "Imaj7", "inv": 0, "conf": 0.23, "effect": "maj7 color — warm, dreamy, jazz-inflected", "extensions": []}, {"start": 212.50902494331066, "end": 218.01215419501133, "symbol": "B", "roman": "III", "inv": 0, "conf": 0.12, "effect": "", "extensions": []}, {"start": 218.01215419501133, "end": 222.23818594104307, "symbol": "C", "roman": "IV", "inv": 0, "conf": 0.11, "effect": "", "extensions": []}, {"start": 222.23818594104307, "end": 223.19020408163266, "symbol": "Am7", "roman": "ii7", "inv": 0, "conf": 0.17, "effect": "m7 color — mellow, restrained; harmony immediately retaken — ostinato-like reinforcement", "extensions": []}, {"start": 223.19020408163266, "end": 227.18403628117915, "symbol": "Cm", "roman": "iv", "inv": 0, "conf": 0.21, "effect": "borrowed from the parallel minor — darkens the palette (modal mixture)", "extensions": []}, {"start": 227.18403628117915, "end": 228.99519274376416, "symbol": "Am7", "roman": "ii7", "inv": 0, "conf": 0.11, "effect": "m7 color — mellow, restrained", "extensions": [2]}, {"start": 228.99519274376416, "end": 234.93950113378685, "symbol": "G", "roman": "I", "inv": 0, "conf": 0.08, "effect": "", "extensions": []}];
+const total = 234.940 || 1;
+const tl = document.getElementById('timeline');
+const detail = document.getElementById('detail');
+const tbl = document.getElementById('tbl');
+const lanes = [];
+chords.forEach(c => {
+  const lane = lanes.find(l => l.end <= c.start + 0.05);
+  const laneIdx = lane === undefined ? lanes.length : lanes.indexOf(lane);
+  if (lane === undefined) lanes.push({end: c.end});
+  else lane.end = c.end;
+  const div = document.createElement('div');
+  div.className = 'chord' + (c.inv ? ' inv' : '');
+  div.style.left = (c.start / total * 100) + '%';
+  div.style.width = Math.max(0.4, (c.end - c.start) / total * 100) + '%';
+  div.style.top = (laneIdx * 44) + 'px';
+  div.innerHTML = `<span class="sym">${c.symbol}</span><span class="rn">${c.roman}</span>`;
+  div.title = `${c.symbol} — ${c.roman}\n${c.effect}`;
+  div.onmouseenter = () => detail.textContent = `${c.symbol} (${c.roman}) — ${c.effect}`;
+  div.onclick = () => detail.textContent = `${c.symbol} (${c.roman}) — ${c.effect}`;
+  tl.appendChild(div);
+  const row = tbl.insertRow(-1);
+  [c.start.toFixed(2), c.end.toFixed(2), c.symbol, c.inv ? c.inv + 'th inv' : 'root', c.roman, c.effect]
+    .forEach(v => { const td = row.insertCell(-1); td.textContent = v; });
+});
+</script>
+</body>
+</html>

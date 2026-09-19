@@ -1,0 +1,8418 @@
+{
+  "title": "user_song",
+  "source": "file",
+  "duration": 391.488,
+  "key": {
+    "name": "F major",
+    "tonic": "F",
+    "mode": "major",
+    "confidence": 0.896
+  },
+  "tempo": 112.3,
+  "rhythm": {
+    "tempo": 112.3,
+    "meter": 4,
+    "confidence": 0.694,
+    "beat_times": [
+      0.836,
+      1.416,
+      1.904,
+      2.438,
+      2.972,
+      3.506,
+      4.04,
+      4.574,
+      5.085,
+      5.596,
+      6.13,
+      6.664,
+      7.198,
+      7.709,
+      8.243,
+      8.777,
+      9.311,
+      9.822,
+      10.333,
+      10.867,
+      11.378,
+      11.889,
+      12.399,
+      12.934,
+      13.468,
+      13.978,
+      14.512,
+      15.047,
+      15.581,
+      16.091,
+      16.625,
+      17.136,
+      17.67,
+      18.181,
+      18.692,
+      19.226,
+      19.76,
+      20.294,
+      20.782,
+      21.293,
+      21.85,
+      22.407,
+      22.941,
+      23.452,
+      23.986,
+      24.543,
+      25.031,
+      25.565,
+      26.099,
+      26.61,
+      27.167,
+      27.678,
+      28.166,
+      28.746,
+      29.257,
+      29.791,
+      30.325,
+      30.836,
+      31.393,
+      31.904,
+      32.438,
+      32.949,
+      33.483,
+      33.994,
+      34.505,
+      35.039,
+      35.573,
+      36.084,
+      36.595,
+      37.152,
+      37.663,
+      38.174,
+      38.684,
+      39.219,
+      39.753,
+      40.287,
+      40.797,
+      41.332,
+      41.842,
+      42.353,
+      42.887,
+      43.421,
+      43.955,
+      44.489,
+      45.0,
+      45.534,
+      46.068,
+      46.602,
+      47.113,
+      47.647,
+      48.181,
+      48.692,
+      49.25,
+      49.784,
+      50.318,
+      50.828,
+      51.339,
+      51.85,
+      52.384,
+      52.918,
+      53.429,
+      53.963,
+      54.497,
+      55.031,
+      55.565,
+      56.076,
+      56.61,
+      57.121,
+      57.655,
+      58.189,
+      58.7,
+      59.211,
+      59.722,
+      60.233,
+      60.767,
+      61.301,
+      61.835,
+      62.369,
+      62.88,
+      63.414,
+      63.948,
+      64.459,
+      64.993,
+      65.503,
+      66.038,
+      66.572,
+      67.082,
+      67.617,
+      68.127,
+      68.685,
+      69.242,
+      69.753,
+      70.287,
+      70.798,
+      71.308,
+      71.843,
+      72.353,
+      72.864,
+      73.375,
+      73.909,
+      74.443,
+      74.954,
+      75.488,
+      76.022,
+      76.556,
+      77.067,
+      77.601,
+      78.135,
+      78.646,
+      79.18,
+      79.737,
+      80.271,
+      80.805,
+      81.293,
+      81.804,
+      82.338,
+      82.895,
+      83.406,
+      83.94,
+      84.451,
+      84.985,
+      85.496,
+      86.007,
+      86.541,
+      87.075,
+      87.586,
+      88.12,
+      88.654,
+      89.165,
+      89.699,
+      90.21,
+      90.744,
+      91.278,
+      91.788,
+      92.323,
+      92.88,
+      93.414,
+      93.901,
+      94.436,
+      94.97,
+      95.504,
+      96.015,
+      96.525,
+      97.059,
+      97.593,
+      98.128,
+      98.638,
+      99.172,
+      99.683,
+      100.217,
+      100.751,
+      101.285,
+      101.796,
+      102.33,
+      102.841,
+      103.375,
+      103.886,
+      104.397,
+      104.908,
+      105.442,
+      105.976,
+      106.51,
+      107.044,
+      107.578,
+      108.112,
+      108.623,
+      109.134,
+      109.668,
+      110.179,
+      110.713,
+      111.247,
+      111.758,
+      112.268,
+      112.803,
+      113.313,
+      113.847,
+      114.381,
+      114.916,
+      115.45,
+      115.984,
+      116.518,
+      117.052,
+      117.563,
+      118.073,
+      118.608,
+      119.118,
+      119.652,
+      120.186,
+      120.721,
+      121.255,
+      121.789,
+      122.3,
+      122.834,
+      123.344,
+      123.878,
+      124.413,
+      124.923,
+      125.434,
+      125.968,
+      126.479,
+      127.036,
+      127.547,
+      128.081,
+      128.592,
+      129.126,
+      129.66,
+      130.171,
+      130.705,
+      131.239,
+      131.75,
+      132.261,
+      132.772,
+      133.306,
+      133.863,
+      134.374,
+      134.885,
+      135.419,
+      135.93,
+      136.44,
+      136.975,
+      137.509,
+      138.066,
+      138.577,
+      139.111,
+      139.645,
+      140.156,
+      140.713,
+      141.224,
+      141.758,
+      142.269,
+      142.803,
+      143.337,
+      143.871,
+      144.405,
+      144.916,
+      145.427,
+      145.961,
+      146.495,
+      147.006,
+      147.54,
+      148.05,
+      148.561,
+      149.095,
+      149.606,
+      150.117,
+      150.651,
+      151.162,
+      151.696,
+      152.207,
+      152.764,
+      153.298,
+      153.832,
+      154.366,
+      154.877,
+      155.411,
+      155.945,
+      156.479,
+      156.99,
+      157.524,
+      158.035,
+      158.569,
+      159.08,
+      159.591,
+      160.125,
+      160.636,
+      161.146,
+      161.681,
+      162.191,
+      162.725,
+      163.26,
+      163.77,
+      164.304,
+      164.838,
+      165.373,
+      165.907,
+      166.441,
+      166.951,
+      167.486,
+      168.02,
+      168.554,
+      169.088,
+      169.599,
+      170.133,
+      170.643,
+      171.178,
+      171.712,
+      172.222,
+      172.756,
+      173.291,
+      173.825,
+      174.335,
+      174.869,
+      175.404,
+      175.938,
+      176.472,
+      176.982,
+      177.517,
+      178.027,
+      178.538,
+      179.049,
+      179.583,
+      180.117,
+      180.628,
+      181.162,
+      181.696,
+      182.207,
+      182.718,
+      183.229,
+      183.786,
+      184.32,
+      184.854,
+      185.365,
+      185.899,
+      186.433,
+      186.944,
+      187.478,
+      188.012,
+      188.523,
+      189.057,
+      189.568,
+      190.102,
+      190.636,
+      191.17,
+      191.704,
+      192.238,
+      192.749,
+      193.283,
+      193.817,
+      194.351,
+      194.862,
+      195.373,
+      195.884,
+      196.394,
+      196.928,
+      197.486,
+      198.043,
+      198.577,
+      199.088,
+      199.599,
+      200.133,
+      200.644,
+      201.154,
+      201.665,
+      202.176,
+      202.687,
+      203.198,
+      203.732,
+      204.289,
+      204.8,
+      205.357,
+      205.868,
+      206.402,
+      206.913,
+      207.447,
+      207.981,
+      208.492,
+      209.026,
+      209.56,
+      210.094,
+      210.628,
+      211.139,
+      211.65,
+      212.184,
+      212.695,
+      213.206,
+      213.74,
+      214.251,
+      214.785,
+      215.319,
+      215.853,
+      216.387,
+      216.898,
+      217.432,
+      217.966,
+      218.477,
+      218.987,
+      219.498,
+      220.056,
+      220.566,
+      221.1,
+      221.634,
+      222.145,
+      222.656,
+      223.19,
+      223.724,
+      224.258,
+      224.792,
+      225.303,
+      225.837,
+      226.371,
+      226.882,
+      227.416,
+      227.95,
+      228.484,
+      228.995,
+      229.529,
+      230.063,
+      230.574,
+      231.108,
+      231.619,
+      232.13,
+      232.664,
+      233.198,
+      233.709,
+      234.22,
+      234.707,
+      235.265,
+      235.775,
+      236.333,
+      236.867,
+      237.378,
+      237.912,
+      238.422,
+      238.933,
+      239.491,
+      240.048,
+      240.559,
+      241.093,
+      241.627,
+      242.138,
+      242.625,
+      243.159,
+      243.693,
+      244.227,
+      244.762,
+      245.296,
+      245.806,
+      246.34,
+      246.851,
+      247.362,
+      247.896,
+      248.407,
+      248.964,
+      249.498,
+      250.032,
+      250.567,
+      251.101,
+      251.611,
+      252.145,
+      252.656,
+      253.19,
+      253.724,
+      254.235,
+      254.769,
+      255.28,
+      255.791,
+      256.325,
+      256.836,
+      257.37,
+      257.881,
+      258.415,
+      258.949,
+      259.483,
+      259.994,
+      260.528,
+      261.039,
+      261.573,
+      262.084,
+      262.618,
+      263.152,
+      263.663,
+      264.197,
+      264.731,
+      265.242,
+      265.799,
+      266.31,
+      266.844,
+      267.355,
+      267.889,
+      268.399,
+      268.934,
+      269.444,
+      270.002,
+      270.512,
+      271.047,
+      271.581,
+      272.091,
+      272.602,
+      273.16,
+      273.67,
+      274.204,
+      274.739,
+      275.273,
+      275.783,
+      276.317,
+      276.828,
+      277.362,
+      277.873,
+      278.384,
+      278.918,
+      279.429,
+      279.986,
+      280.52,
+      281.054,
+      281.588,
+      282.099,
+      282.657,
+      283.167,
+      283.701,
+      284.212,
+      284.746,
+      285.28,
+      285.768,
+      286.279,
+      286.813,
+      287.347,
+      287.858,
+      288.415,
+      288.926,
+      289.437,
+      289.971,
+      290.505,
+      291.016,
+      291.55,
+      292.084,
+      292.618,
+      293.152,
+      293.663,
+      294.197,
+      294.708,
+      295.242,
+      295.753,
+      296.263,
+      296.821,
+      297.378,
+      297.866,
+      298.376,
+      298.91,
+      299.445,
+      299.955,
+      300.489,
+      301.0,
+      301.511,
+      302.022,
+      302.556,
+      303.067,
+      303.601,
+      304.112,
+      304.646,
+      305.18,
+      305.714,
+      306.225,
+      306.736,
+      307.27,
+      307.804,
+      308.315,
+      308.849,
+      309.383,
+      309.917,
+      310.451,
+      310.962,
+      311.496,
+      312.03,
+      312.541,
+      313.051,
+      313.609,
+      314.143,
+      314.654,
+      315.188,
+      315.699,
+      316.233,
+      316.743,
+      317.277,
+      317.788,
+      318.322,
+      318.833,
+      319.344,
+      319.878,
+      320.412,
+      320.946,
+      321.457,
+      322.014,
+      322.525,
+      323.082,
+      323.617,
+      324.151,
+      324.685,
+      325.195,
+      325.73,
+      326.24,
+      326.774,
+      327.308,
+      327.796,
+      328.33,
+      328.864,
+      329.398,
+      329.909,
+      330.443,
+      330.954,
+      331.488,
+      331.999,
+      332.51,
+      333.044,
+      333.555,
+      334.089,
+      334.623,
+      335.157,
+      335.668,
+      336.202,
+      336.713,
+      337.247,
+      337.804,
+      338.315,
+      338.849,
+      339.383,
+      339.917,
+      340.428,
+      340.985,
+      341.519,
+      342.03,
+      342.564,
+      343.098,
+      343.632,
+      344.143,
+      344.654,
+      345.188,
+      345.722,
+      346.233,
+      346.767,
+      347.278,
+      347.788,
+      348.323,
+      348.833,
+      349.344,
+      349.878,
+      350.389,
+      350.9,
+      351.434,
+      351.945,
+      352.456,
+      352.967,
+      353.477,
+      354.035,
+      354.545,
+      355.103,
+      355.637,
+      356.148,
+      356.682,
+      357.193,
+      357.703,
+      358.261,
+      358.772,
+      359.306,
+      359.84,
+      360.35,
+      360.885,
+      361.419,
+      361.906,
+      362.44,
+      362.974,
+      363.485,
+      363.996,
+      364.53,
+      365.087,
+      365.598,
+      366.109,
+      366.643,
+      367.177,
+      367.688,
+      368.222,
+      368.756,
+      369.29,
+      369.801,
+      370.335,
+      370.869,
+      371.38,
+      371.937,
+      372.471,
+      373.005,
+      373.539,
+      374.05,
+      374.584,
+      375.095,
+      375.606,
+      376.14,
+      376.674,
+      377.185,
+      377.719,
+      378.253
+    ],
+    "downbeats": [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21,
+      25,
+      29,
+      33,
+      37,
+      41,
+      45,
+      49,
+      53,
+      57,
+      61,
+      65,
+      69,
+      73,
+      77,
+      81,
+      85,
+      89,
+      93,
+      97,
+      101,
+      105,
+      109,
+      113,
+      117,
+      121,
+      125,
+      129,
+      133,
+      137,
+      141,
+      145,
+      149,
+      153,
+      157,
+      161,
+      165,
+      169,
+      173,
+      177,
+      181,
+      185,
+      189,
+      193,
+      197,
+      201,
+      205,
+      209,
+      213,
+      217,
+      221,
+      225,
+      229,
+      233,
+      237,
+      241,
+      245,
+      249,
+      253,
+      257,
+      261,
+      265,
+      269,
+      273,
+      277,
+      281,
+      285,
+      289,
+      293,
+      297,
+      301,
+      305,
+      309,
+      313,
+      317,
+      321,
+      325,
+      329,
+      333,
+      337,
+      341,
+      345,
+      349,
+      353,
+      357,
+      361,
+      365,
+      369,
+      373,
+      377,
+      381,
+      385,
+      389,
+      393,
+      397,
+      401,
+      405,
+      409,
+      413,
+      417,
+      421,
+      425,
+      429,
+      433,
+      437,
+      441,
+      445,
+      449,
+      453,
+      457,
+      461,
+      465,
+      469,
+      473,
+      477,
+      481,
+      485,
+      489,
+      493,
+      497,
+      501,
+      505,
+      509,
+      513,
+      517,
+      521,
+      525,
+      529,
+      533,
+      537,
+      541,
+      545,
+      549,
+      553,
+      557,
+      561,
+      565,
+      569,
+      573,
+      577,
+      581,
+      585,
+      589,
+      593,
+      597,
+      601,
+      605,
+      609,
+      613,
+      617,
+      621,
+      625,
+      629,
+      633,
+      637,
+      641,
+      645,
+      649,
+      653,
+      657,
+      661,
+      665,
+      669,
+      673,
+      677,
+      681,
+      685,
+      689,
+      693,
+      697,
+      701,
+      705,
+      709,
+      713,
+      717
+    ]
+  },
+  "chords": [
+    {
+      "start": 0.0,
+      "end": 1.649,
+      "chord": "Fm",
+      "root": "F",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "i",
+      "role": "tonic",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 1,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 3.09,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture)"
+    },
+    {
+      "start": 1.649,
+      "end": 2.438,
+      "chord": "C",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [
+          5
+        ],
+        "spacing": "spread",
+        "added_notes": [
+          "B"
+        ],
+        "confidence": 0.36
+      },
+      "rhythm": {
+        "bar": 1,
+        "beat_in_bar": 2,
+        "beats": 1,
+        "beat_fraction": 1.48,
+        "pushed": true
+      }
+    },
+    {
+      "start": 2.438,
+      "end": 4.296,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.174,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 1,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.48,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 4.296,
+      "end": 6.664,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.21,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 2,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.43,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 6.664,
+      "end": 8.475,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.219,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 3,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 8.475,
+      "end": 10.751,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.24,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 4,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.26,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 10.751,
+      "end": 12.678,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.226,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 5,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.61,
+        "pushed": true
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 12.678,
+      "end": 14.768,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.207,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 6,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.91,
+        "pushed": true
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 14.768,
+      "end": 16.834,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.169,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "D",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 7,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.87,
+        "pushed": false
+      }
+    },
+    {
+      "start": 16.834,
+      "end": 18.692,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.141,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 8,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 18.692,
+      "end": 19.226,
+      "chord": "Gm7b5",
+      "root": "G",
+      "quality": "hdim7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii\u00f87",
+      "role": "predominant",
+      "confidence": 0.093,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 9,
+        "beat_in_bar": 3,
+        "beats": 1,
+        "beat_fraction": 1.0,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture); half-diminished \u2014 suspenseful, unsettled"
+    },
+    {
+      "start": 19.226,
+      "end": 21.084,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.08,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 9,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 21.084,
+      "end": 23.452,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.13,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 10,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.43,
+        "pushed": true
+      }
+    },
+    {
+      "start": 23.452,
+      "end": 24.543,
+      "chord": "E7",
+      "root": "E",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "E",
+      "roman": "VII7",
+      "role": "dominant",
+      "confidence": 0.099,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "D#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "D#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 11,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 2.04,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 24.543,
+      "end": 25.379,
+      "chord": "A/C#",
+      "root": "A",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "C#",
+      "roman": "III",
+      "role": "tonic",
+      "confidence": 0.062,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "C#",
+          "D"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C",
+          "D"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 12,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.57,
+        "pushed": false
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing"
+    },
+    {
+      "start": 25.379,
+      "end": 27.678,
+      "chord": "Dm",
+      "root": "D",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi",
+      "role": "tonic",
+      "confidence": 0.071,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C#",
+          "D",
+          "F",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "C#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 12,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.3,
+        "pushed": true
+      }
+    },
+    {
+      "start": 27.678,
+      "end": 29.791,
+      "chord": "G7",
+      "root": "G",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "II7",
+      "role": "predominant",
+      "confidence": 0.05,
+      "voicing": {
+        "pitch_classes": [
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "single note",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 13,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 29.791,
+      "end": 31.904,
+      "chord": "Am7",
+      "root": "A",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A",
+      "roman": "iii7",
+      "role": "tonic",
+      "confidence": 0.027,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 14,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 31.904,
+      "end": 33.785,
+      "chord": "D#maj7",
+      "root": "D#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "bVIImaj7",
+      "role": "dominant",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "D#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 15,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.52,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture); maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 33.785,
+      "end": 35.039,
+      "chord": "A#7/D",
+      "root": "A#",
+      "quality": "7",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "D",
+      "roman": "IV7",
+      "role": "predominant",
+      "confidence": 0.039,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C#",
+          "D",
+          "F",
+          "F#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "C#",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 16,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.35,
+        "pushed": true
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing; dominant 7th \u2014 bluesy forward drive; stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 35.039,
+      "end": 36.084,
+      "chord": "C/E",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "E",
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.128,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "D#",
+          "E",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "D#",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 17,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      },
+      "effect": "leading tone in the bass \u2014 pulls hard upward toward the tonic; stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 36.084,
+      "end": 37.965,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.147,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A#",
+          "B",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 17,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.52,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 37.965,
+      "end": 40.287,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.091,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 18,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.35,
+        "pushed": true
+      }
+    },
+    {
+      "start": 40.287,
+      "end": 42.121,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi",
+      "role": "tonic",
+      "confidence": 0.051,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "C",
+          "D",
+          "D#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 19,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.43,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 42.121,
+      "end": 44.489,
+      "chord": "Dm",
+      "root": "D",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi",
+      "role": "tonic",
+      "confidence": 0.105,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C",
+          "C#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 20,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.43,
+        "pushed": true
+      }
+    },
+    {
+      "start": 44.489,
+      "end": 45.743,
+      "chord": "Gm",
+      "root": "G",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii",
+      "role": "predominant",
+      "confidence": 0.088,
+      "voicing": {
+        "pitch_classes": [
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "single note",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 21,
+        "beat_in_bar": 4,
+        "beats": 3,
+        "beat_fraction": 2.35,
+        "pushed": false
+      }
+    },
+    {
+      "start": 45.743,
+      "end": 48.181,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/Imaj7",
+      "role": "dominant",
+      "confidence": 0.037,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [
+          "B"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 22,
+        "beat_in_bar": 2,
+        "beats": 4,
+        "beat_fraction": 4.56,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Fmaj7; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 48.181,
+      "end": 50.596,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.129,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "D",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 23,
+        "beat_in_bar": 3,
+        "beats": 5,
+        "beat_fraction": 4.52,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 50.596,
+      "end": 52.918,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.083,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 24,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.35,
+        "pushed": true
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 52.918,
+      "end": 54.729,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.09,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "D",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 25,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 54.729,
+      "end": 57.121,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.096,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 26,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.48,
+        "pushed": false
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 57.121,
+      "end": 59.095,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.164,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "E",
+          "F",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A#",
+          "E",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 27,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.69,
+        "pushed": false
+      }
+    },
+    {
+      "start": 59.095,
+      "end": 60.233,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.239,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 28,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.13,
+        "pushed": true
+      }
+    },
+    {
+      "start": 60.233,
+      "end": 63.135,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi",
+      "role": "tonic",
+      "confidence": 0.017,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "C",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 29,
+        "beat_in_bar": 2,
+        "beats": 6,
+        "beat_fraction": 5.43,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 63.135,
+      "end": 64.737,
+      "chord": "Dm",
+      "root": "D",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi",
+      "role": "tonic",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "C#",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C#",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 30,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.0,
+        "pushed": false
+      }
+    },
+    {
+      "start": 64.737,
+      "end": 65.503,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.143,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C#",
+          "D",
+          "D#",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 31,
+        "beat_in_bar": 2,
+        "beats": 1,
+        "beat_fraction": 1.43,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 65.503,
+      "end": 67.617,
+      "chord": "Gm",
+      "root": "G",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii",
+      "role": "predominant",
+      "confidence": 0.092,
+      "voicing": {
+        "pitch_classes": [
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "single note",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 31,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.96,
+        "pushed": false
+      }
+    },
+    {
+      "start": 67.617,
+      "end": 69.404,
+      "chord": "Amaj7",
+      "root": "A",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A",
+      "roman": "IIImaj7",
+      "role": "tonic",
+      "confidence": 0.107,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 32,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.35,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 69.404,
+      "end": 71.843,
+      "chord": "D#",
+      "root": "D#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "bVII",
+      "role": "dominant",
+      "confidence": 0.076,
+      "voicing": {
+        "pitch_classes": [
+          "D",
+          "D#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 33,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.56,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture)"
+    },
+    {
+      "start": 71.843,
+      "end": 72.864,
+      "chord": "Dm",
+      "root": "D",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi",
+      "role": "tonic",
+      "confidence": 0.041,
+      "voicing": {
+        "pitch_classes": [
+          "D"
+        ],
+        "extensions": [],
+        "spacing": "single note",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 34,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.91,
+        "pushed": false
+      }
+    },
+    {
+      "start": 72.864,
+      "end": 73.654,
+      "chord": "Em",
+      "root": "E",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "E",
+      "roman": "vii",
+      "role": "dominant",
+      "confidence": 0.041,
+      "voicing": {
+        "pitch_classes": [
+          "D#",
+          "E"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 35,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 73.654,
+      "end": 75.743,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.087,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 35,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.91,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 75.743,
+      "end": 77.067,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.204,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 36,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 77.067,
+      "end": 78.135,
+      "chord": "Am7",
+      "root": "A",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A",
+      "roman": "iii7",
+      "role": "tonic",
+      "confidence": 0.029,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 37,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 2.0,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 78.135,
+      "end": 79.18,
+      "chord": "E7",
+      "root": "E",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "E",
+      "roman": "VII7",
+      "role": "dominant",
+      "confidence": 0.124,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "C#",
+          "D#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 37,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 79.18,
+      "end": 79.993,
+      "chord": "C#dim",
+      "root": "C#",
+      "quality": "dim",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C#",
+      "roman": "bvi\u00b0",
+      "role": "tonic",
+      "confidence": 0.285,
+      "voicing": {
+        "pitch_classes": [
+          "C#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 38,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.52,
+        "pushed": false
+      }
+    },
+    {
+      "start": 79.993,
+      "end": 82.338,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.033,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "C#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 38,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.39,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 82.338,
+      "end": 84.126,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.083,
+      "voicing": {
+        "pitch_classes": [
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "single note",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 39,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.35,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 84.126,
+      "end": 86.541,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.049,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 40,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.52,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 86.541,
+      "end": 88.491,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.091,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A#",
+          "B",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 41,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.65,
+        "pushed": false
+      }
+    },
+    {
+      "start": 88.491,
+      "end": 90.047,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.116,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 42,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.91,
+        "pushed": true
+      }
+    },
+    {
+      "start": 90.047,
+      "end": 90.535,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.034,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [
+          9
+        ],
+        "spacing": "cluster",
+        "added_notes": [
+          "B",
+          "C#",
+          "D",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.322
+      },
+      "rhythm": {
+        "bar": 43,
+        "beat_in_bar": 2,
+        "beats": 1,
+        "beat_fraction": 0.91,
+        "pushed": true
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 90.535,
+      "end": 92.601,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.107,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 43,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.87,
+        "pushed": true
+      }
+    },
+    {
+      "start": 92.601,
+      "end": 93.901,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.157,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 44,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.43,
+        "pushed": false
+      }
+    },
+    {
+      "start": 93.901,
+      "end": 94.737,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.063,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 45,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.57,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 94.737,
+      "end": 97.059,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.096,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 45,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.35,
+        "pushed": true
+      },
+      "effect": "harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 97.059,
+      "end": 99.172,
+      "chord": "A#m",
+      "root": "A#",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "iv",
+      "role": "predominant",
+      "confidence": 0.05,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "C",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 46,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture)"
+    },
+    {
+      "start": 99.172,
+      "end": 100.984,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.086,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 47,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      }
+    },
+    {
+      "start": 100.984,
+      "end": 103.097,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.119,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 48,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      }
+    },
+    {
+      "start": 103.097,
+      "end": 105.14,
+      "chord": "Gmaj7",
+      "root": "G",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "IImaj7",
+      "role": "predominant",
+      "confidence": 0.102,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A#",
+          "E",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 49,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.82,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 105.14,
+      "end": 106.51,
+      "chord": "Fm6/C",
+      "root": "F",
+      "quality": "min6",
+      "inversion": 2,
+      "inversion_name": "2nd inversion",
+      "bass": "C",
+      "roman": "i6",
+      "role": "tonic",
+      "confidence": 0.094,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 50,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.56,
+        "pushed": false
+      },
+      "effect": "2nd inversion \u2014 unstable, transitional; classic passing or cadential 6/4 feel; m6 \u2014 bittersweet minor color"
+    },
+    {
+      "start": 106.51,
+      "end": 109.366,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.072,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 51,
+        "beat_in_bar": 2,
+        "beats": 6,
+        "beat_fraction": 5.35,
+        "pushed": false
+      }
+    },
+    {
+      "start": 109.366,
+      "end": 111.131,
+      "chord": "A#sus2",
+      "root": "A#",
+      "quality": "sus2",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVsus2",
+      "role": "predominant",
+      "confidence": 0.296,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 52,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.3,
+        "pushed": false
+      },
+      "effect": "suspended 2nd \u2014 open, airy"
+    },
+    {
+      "start": 111.131,
+      "end": 115.984,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi7",
+      "role": "tonic",
+      "confidence": 0.038,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "B",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 53,
+        "beat_in_bar": 2,
+        "beats": 9,
+        "beat_fraction": 9.08,
+        "pushed": true
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm7; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 115.984,
+      "end": 120.186,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.056,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C#",
+          "D#",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 55,
+        "beat_in_bar": 4,
+        "beats": 8,
+        "beat_fraction": 7.86,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 120.186,
+      "end": 120.976,
+      "chord": "G7sus4",
+      "root": "G",
+      "quality": "7sus4",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "II7sus4",
+      "role": "predominant",
+      "confidence": 0.2,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 57,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 120.976,
+      "end": 122.3,
+      "chord": "C",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.054,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "D",
+          "F",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 58,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 122.3,
+      "end": 123.971,
+      "chord": "G7/B",
+      "root": "G",
+      "quality": "7",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "B",
+      "roman": "II7",
+      "role": "predominant",
+      "confidence": 0.135,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C#",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "C#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 58,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.13,
+        "pushed": false
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 123.971,
+      "end": 124.552,
+      "chord": "C#m7",
+      "root": "C#",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "bvi7",
+      "role": "tonic",
+      "confidence": 0.043,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 59,
+        "beat_in_bar": 3,
+        "beats": 1,
+        "beat_fraction": 1.09,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 124.552,
+      "end": 128.592,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.039,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "F",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 59,
+        "beat_in_bar": 4,
+        "beats": 7,
+        "beat_fraction": 7.56,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 128.592,
+      "end": 130.496,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.096,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 61,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.56,
+        "pushed": false
+      }
+    },
+    {
+      "start": 130.496,
+      "end": 132.772,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.099,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 62,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.26,
+        "pushed": true
+      }
+    },
+    {
+      "start": 132.772,
+      "end": 134.629,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi7",
+      "role": "tonic",
+      "confidence": 0.037,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "B",
+          "C",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 63,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.48,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm7; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 134.629,
+      "end": 136.975,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.081,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 64,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.39,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 136.975,
+      "end": 139.111,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.126,
+      "voicing": {
+        "pitch_classes": [
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 65,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 4.0,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 139.111,
+      "end": 140.945,
+      "chord": "F/A",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "A",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.04,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 66,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.43,
+        "pushed": false
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing"
+    },
+    {
+      "start": 140.945,
+      "end": 142.594,
+      "chord": "D#",
+      "root": "D#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "bVII",
+      "role": "dominant",
+      "confidence": 0.084,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "D#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "D"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 67,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.09,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture)"
+    },
+    {
+      "start": 142.594,
+      "end": 144.614,
+      "chord": "A#/D",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "D",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.119,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D#",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 68,
+        "beat_in_bar": 2,
+        "beats": 4,
+        "beat_fraction": 3.78,
+        "pushed": true
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing"
+    },
+    {
+      "start": 144.614,
+      "end": 145.218,
+      "chord": "C/E",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "E",
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.221,
+      "voicing": {
+        "pitch_classes": [
+          "C",
+          "D#",
+          "E",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "D#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 69,
+        "beat_in_bar": 2,
+        "beats": 1,
+        "beat_fraction": 1.13,
+        "pushed": false
+      },
+      "effect": "leading tone in the bass \u2014 pulls hard upward toward the tonic"
+    },
+    {
+      "start": 145.218,
+      "end": 147.238,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.108,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 69,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.78,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 147.238,
+      "end": 148.352,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.178,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 70,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.09,
+        "pushed": false
+      }
+    },
+    {
+      "start": 148.352,
+      "end": 149.235,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.033,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "C#",
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 71,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 1.65,
+        "pushed": true
+      }
+    },
+    {
+      "start": 149.235,
+      "end": 150.256,
+      "chord": "Em7",
+      "root": "E",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "E",
+      "roman": "vii7",
+      "role": "dominant",
+      "confidence": 0.071,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "D#",
+          "F",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 71,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.91,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 150.256,
+      "end": 151.464,
+      "chord": "A7/C#",
+      "root": "A",
+      "quality": "7",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "C#",
+      "roman": "V7/vi7",
+      "role": "tonic",
+      "confidence": 0.056,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "C",
+          "D"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 72,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.26,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm7; 1st inversion \u2014 bass moves by step, keeps the line flowing; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 151.464,
+      "end": 153.832,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.085,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C#",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 72,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.43,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 153.832,
+      "end": 154.761,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.098,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 73,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.74,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 154.761,
+      "end": 159.823,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "D",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 74,
+        "beat_in_bar": 1,
+        "beats": 10,
+        "beat_fraction": 9.47,
+        "pushed": true
+      }
+    },
+    {
+      "start": 159.823,
+      "end": 161.982,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.117,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 76,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.04,
+        "pushed": false
+      }
+    },
+    {
+      "start": 161.982,
+      "end": 166.139,
+      "chord": "C",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.096,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "D",
+          "E",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "D",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 77,
+        "beat_in_bar": 3,
+        "beats": 8,
+        "beat_fraction": 7.78,
+        "pushed": true
+      }
+    },
+    {
+      "start": 166.139,
+      "end": 167.486,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.119,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 79,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.52,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 167.486,
+      "end": 170.318,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.091,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 80,
+        "beat_in_bar": 2,
+        "beats": 6,
+        "beat_fraction": 5.3,
+        "pushed": false
+      },
+      "effect": "stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 170.318,
+      "end": 172.756,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.091,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 81,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.56,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 172.756,
+      "end": 174.73,
+      "chord": "F/A",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "A",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.104,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 82,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.69,
+        "pushed": false
+      },
+      "effect": "1st inversion \u2014 bass moves by step, keeps the line flowing; stepwise ascending bass line \u2014 builds momentum and lift"
+    },
+    {
+      "start": 174.73,
+      "end": 176.982,
+      "chord": "D#maj7",
+      "root": "D#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "bVIImaj7",
+      "role": "dominant",
+      "confidence": 0.157,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "D#",
+          "E",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 83,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.21,
+        "pushed": true
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture); maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 176.982,
+      "end": 178.12,
+      "chord": "C/E",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 1,
+      "inversion_name": "1st inversion",
+      "bass": "E",
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.203,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 84,
+        "beat_in_bar": 4,
+        "beats": 3,
+        "beat_fraction": 2.13,
+        "pushed": false
+      },
+      "effect": "leading tone in the bass \u2014 pulls hard upward toward the tonic"
+    },
+    {
+      "start": 178.12,
+      "end": 179.049,
+      "chord": "G",
+      "root": "G",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "II",
+      "role": "predominant",
+      "confidence": 0.121,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 85,
+        "beat_in_bar": 2,
+        "beats": 1,
+        "beat_fraction": 1.74,
+        "pushed": false
+      }
+    },
+    {
+      "start": 179.049,
+      "end": 183.229,
+      "chord": "C",
+      "root": "C",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V",
+      "role": "dominant",
+      "confidence": 0.111,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "A#",
+          "B",
+          "D",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 85,
+        "beat_in_bar": 4,
+        "beats": 8,
+        "beat_fraction": 7.82,
+        "pushed": false
+      }
+    },
+    {
+      "start": 183.229,
+      "end": 184.599,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.113,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 87,
+        "beat_in_bar": 4,
+        "beats": 3,
+        "beat_fraction": 2.56,
+        "pushed": false
+      }
+    },
+    {
+      "start": 184.599,
+      "end": 187.478,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.053,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "D",
+          "E",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 88,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 5.39,
+        "pushed": true
+      }
+    },
+    {
+      "start": 187.478,
+      "end": 189.359,
+      "chord": "D#",
+      "root": "D#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "bVII",
+      "role": "dominant",
+      "confidence": 0.16,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "D",
+          "D#",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "D",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 89,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.52,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture)"
+    },
+    {
+      "start": 189.359,
+      "end": 191.704,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.061,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 90,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.39,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 191.704,
+      "end": 196.209,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7",
+      "role": "dominant",
+      "confidence": 0.039,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "C",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "D",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 91,
+        "beat_in_bar": 4,
+        "beats": 9,
+        "beat_fraction": 8.43,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 196.209,
+      "end": 197.927,
+      "chord": "Am/E",
+      "root": "A",
+      "quality": "min",
+      "inversion": 2,
+      "inversion_name": "2nd inversion",
+      "bass": "E",
+      "roman": "iii",
+      "role": "tonic",
+      "confidence": 0.063,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "E",
+          "F",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "F",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 93,
+        "beat_in_bar": 4,
+        "beats": 3,
+        "beat_fraction": 3.22,
+        "pushed": true
+      },
+      "effect": "2nd inversion \u2014 unstable, transitional; classic passing or cadential 6/4 feel"
+    },
+    {
+      "start": 197.927,
+      "end": 198.856,
+      "chord": "Csus2",
+      "root": "C",
+      "quality": "sus2",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "Vsus2",
+      "role": "dominant",
+      "confidence": 0.083,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "D",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 94,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.74,
+        "pushed": true
+      },
+      "effect": "suspended 2nd \u2014 open, airy"
+    },
+    {
+      "start": 198.856,
+      "end": 200.133,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.19,
+      "voicing": {
+        "pitch_classes": [
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 95,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.39,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 200.133,
+      "end": 201.921,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi",
+      "role": "tonic",
+      "confidence": 0.062,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D",
+          "F",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 95,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.35,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 201.921,
+      "end": 203.732,
+      "chord": "Dm",
+      "root": "D",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi",
+      "role": "tonic",
+      "confidence": 0.048,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [
+          2,
+          9
+        ],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "C",
+          "D#",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.339
+      },
+      "rhythm": {
+        "bar": 96,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.39,
+        "pushed": true
+      }
+    },
+    {
+      "start": 203.732,
+      "end": 204.289,
+      "chord": "Gmaj7",
+      "root": "G",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "IImaj7",
+      "role": "predominant",
+      "confidence": 0.247,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "D",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "A",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 97,
+        "beat_in_bar": 3,
+        "beats": 1,
+        "beat_fraction": 1.04,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 204.289,
+      "end": 205.195,
+      "chord": "Gm",
+      "root": "G",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "ii",
+      "role": "predominant",
+      "confidence": 0.108,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [
+          2
+        ],
+        "spacing": "open",
+        "added_notes": [
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.331
+      },
+      "rhythm": {
+        "bar": 97,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.7,
+        "pushed": false
+      }
+    },
+    {
+      "start": 205.195,
+      "end": 208.376,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.083,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 98,
+        "beat_in_bar": 1,
+        "beats": 6,
+        "beat_fraction": 5.95,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 208.376,
+      "end": 210.628,
+      "chord": "D#7",
+      "root": "D#",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D#",
+      "roman": "subV7/VI7",
+      "role": "dominant",
+      "confidence": 0.044,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 99,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.22,
+        "pushed": true
+      },
+      "effect": "tritone substitution \u2014 chromatic, slippery approach to D7; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 210.628,
+      "end": 211.65,
+      "chord": "D7",
+      "root": "D",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "VI7",
+      "role": "tonic",
+      "confidence": 0.038,
+      "voicing": {
+        "pitch_classes": [
+          "D",
+          "F#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 100,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.91,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 211.65,
+      "end": 212.695,
+      "chord": "Cmaj7",
+      "root": "C",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Vmaj7",
+      "role": "dominant",
+      "confidence": 0.108,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "A#",
+          "C#",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 101,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 212.695,
+      "end": 214.506,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.111,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 101,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      }
+    },
+    {
+      "start": 214.506,
+      "end": 216.898,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.218,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 102,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.48,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 216.898,
+      "end": 218.709,
+      "chord": "A7",
+      "root": "A",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/vi7",
+      "role": "tonic",
+      "confidence": 0.042,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 103,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Dm7; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 218.709,
+      "end": 221.1,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.078,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 104,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.48,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 221.1,
+      "end": 221.867,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.122,
+      "voicing": {
+        "pitch_classes": [
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 105,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.43,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 221.867,
+      "end": 223.19,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.088,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "C",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 106,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.48,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 223.19,
+      "end": 225.117,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.061,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "F"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 106,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.61,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 225.117,
+      "end": 227.138,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.104,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 107,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.78,
+        "pushed": true
+      }
+    },
+    {
+      "start": 227.138,
+      "end": 228.995,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.166,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 108,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.48,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 228.995,
+      "end": 230.574,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.063,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "E",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 109,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.96,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 230.574,
+      "end": 231.619,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.081,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "C",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 110,
+        "beat_in_bar": 2,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 231.619,
+      "end": 235.52,
+      "chord": "F7/C",
+      "root": "F",
+      "quality": "7",
+      "inversion": 2,
+      "inversion_name": "2nd inversion",
+      "bass": "C",
+      "roman": "I7",
+      "role": "tonic",
+      "confidence": 0.035,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "D",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 110,
+        "beat_in_bar": 4,
+        "beats": 8,
+        "beat_fraction": 7.3,
+        "pushed": false
+      },
+      "effect": "2nd inversion \u2014 unstable, transitional; classic passing or cadential 6/4 feel; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 235.52,
+      "end": 237.772,
+      "chord": "A#7",
+      "root": "A#",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV7",
+      "role": "predominant",
+      "confidence": 0.073,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C",
+          "C#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 112,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.22,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 237.772,
+      "end": 239.212,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.087,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 113,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.69,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 239.212,
+      "end": 242.138,
+      "chord": "Fmaj7",
+      "root": "F",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "Imaj7",
+      "role": "tonic",
+      "confidence": 0.081,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 114,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 5.48,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 242.138,
+      "end": 244.227,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.028,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 115,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.91,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 244.227,
+      "end": 246.085,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.101,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 116,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.48,
+        "pushed": false
+      }
+    },
+    {
+      "start": 246.085,
+      "end": 247.2,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.081,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 117,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.09,
+        "pushed": true
+      }
+    },
+    {
+      "start": 247.2,
+      "end": 254.653,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.042,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 118,
+        "beat_in_bar": 1,
+        "beats": 14,
+        "beat_fraction": 13.95,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 254.653,
+      "end": 255.512,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.205,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 121,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.61,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 255.512,
+      "end": 256.58,
+      "chord": "Gm7",
+      "root": "G",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii7",
+      "role": "predominant",
+      "confidence": 0.074,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [
+          2
+        ],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E"
+        ],
+        "confidence": 0.425
+      },
+      "rhythm": {
+        "bar": 122,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.0,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 256.58,
+      "end": 258.833,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.059,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 122,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.22,
+        "pushed": true
+      }
+    },
+    {
+      "start": 258.833,
+      "end": 260.319,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.179,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "C",
+          "E"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 123,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.78,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 260.319,
+      "end": 261.875,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.033,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "B",
+          "C#",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 124,
+        "beat_in_bar": 2,
+        "beats": 3,
+        "beat_fraction": 2.91,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 261.875,
+      "end": 262.734,
+      "chord": "Am7",
+      "root": "A",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A",
+      "roman": "iii7",
+      "role": "tonic",
+      "confidence": 0.05,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 125,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 1.61,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 262.734,
+      "end": 264.475,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.167,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 125,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.26,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 264.475,
+      "end": 267.099,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.085,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 126,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.91,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 267.099,
+      "end": 268.005,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.184,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 127,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.69,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 268.005,
+      "end": 269.444,
+      "chord": "C7/G",
+      "root": "C",
+      "quality": "7",
+      "inversion": 2,
+      "inversion_name": "2nd inversion",
+      "bass": "G",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.041,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "F",
+          "F#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 128,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.69,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; 2nd inversion \u2014 unstable, transitional; classic passing or cadential 6/4 feel; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 269.444,
+      "end": 271.372,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.056,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 128,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.61,
+        "pushed": false
+      }
+    },
+    {
+      "start": 271.372,
+      "end": 272.974,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.219,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 129,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.0,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 272.974,
+      "end": 275.528,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.05,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 130,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.78,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 275.528,
+      "end": 277.362,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.124,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 131,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.43,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 277.362,
+      "end": 279.731,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.085,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 132,
+        "beat_in_bar": 3,
+        "beats": 5,
+        "beat_fraction": 4.43,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 279.731,
+      "end": 280.845,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.099,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 133,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.09,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change"
+    },
+    {
+      "start": 280.845,
+      "end": 281.821,
+      "chord": "G7",
+      "root": "G",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "II7",
+      "role": "predominant",
+      "confidence": 0.047,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 134,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 1.83,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 281.821,
+      "end": 283.934,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "D",
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.129,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 134,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 283.934,
+      "end": 285.513,
+      "chord": "Cm7/A#",
+      "root": "C",
+      "quality": "min7",
+      "inversion": 3,
+      "inversion_name": "3rd inversion",
+      "bass": "A#",
+      "roman": "v7",
+      "role": "dominant",
+      "confidence": 0.033,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "F",
+          "G"
+        ],
+        "extensions": [
+          9
+        ],
+        "spacing": "spread",
+        "added_notes": [
+          "D",
+          "F"
+        ],
+        "confidence": 0.329
+      },
+      "rhythm": {
+        "bar": 135,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.96,
+        "pushed": false
+      },
+      "effect": "borrowed from the parallel minor \u2014 darkens the palette (modal mixture); 3rd inversion \u2014 the 7th sits in the bass, adding urgency before resolving down; m7 color \u2014 mellow, restrained; pedal point on A# \u2014 grounds the harmony while chords change"
+    },
+    {
+      "start": 285.513,
+      "end": 288.136,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.045,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 136,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.91,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 288.136,
+      "end": 289.692,
+      "chord": "A#7",
+      "root": "A#",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV7",
+      "role": "predominant",
+      "confidence": 0.077,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 137,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 2.91,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive; pedal point on A# \u2014 grounds the harmony while chords change"
+    },
+    {
+      "start": 289.692,
+      "end": 292.316,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.038,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 138,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.91,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 292.316,
+      "end": 293.361,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.114,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "F",
+          "F#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 139,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 293.361,
+      "end": 296.565,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.076,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 140,
+        "beat_in_bar": 1,
+        "beats": 6,
+        "beat_fraction": 6.0,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 296.565,
+      "end": 297.866,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.2,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 141,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.43,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change"
+    },
+    {
+      "start": 297.866,
+      "end": 300.722,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.055,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 142,
+        "beat_in_bar": 2,
+        "beats": 6,
+        "beat_fraction": 5.34,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 300.722,
+      "end": 302.835,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.031,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 143,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.95,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 302.835,
+      "end": 304.901,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.092,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 144,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 3.87,
+        "pushed": true
+      }
+    },
+    {
+      "start": 304.901,
+      "end": 306.736,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.175,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 145,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.43,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 306.736,
+      "end": 309.081,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.037,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 146,
+        "beat_in_bar": 3,
+        "beats": 5,
+        "beat_fraction": 4.39,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 309.081,
+      "end": 310.799,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.159,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "C",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 147,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.22,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected; pedal point on A# \u2014 grounds the harmony while chords change; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 310.799,
+      "end": 313.307,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.062,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 148,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.69,
+        "pushed": true
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 313.307,
+      "end": 315.188,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.174,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 149,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.52,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 315.188,
+      "end": 317.533,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.046,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 150,
+        "beat_in_bar": 3,
+        "beats": 5,
+        "beat_fraction": 4.39,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained; harmony immediately retaken \u2014 ostinato-like reinforcement"
+    },
+    {
+      "start": 317.533,
+      "end": 319.878,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7",
+      "role": "dominant",
+      "confidence": 0.065,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "D",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 151,
+        "beat_in_bar": 3,
+        "beats": 4,
+        "beat_fraction": 4.39,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 319.878,
+      "end": 321.689,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.052,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 152,
+        "beat_in_bar": 4,
+        "beats": 4,
+        "beat_fraction": 3.39,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 321.689,
+      "end": 322.781,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.086,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 153,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.04,
+        "pushed": false
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 322.781,
+      "end": 323.872,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7",
+      "role": "dominant",
+      "confidence": 0.04,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "D",
+          "D#",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 154,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.04,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 323.872,
+      "end": 330.304,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.069,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 154,
+        "beat_in_bar": 3,
+        "beats": 12,
+        "beat_fraction": 12.04,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 330.304,
+      "end": 331.233,
+      "chord": "A#7",
+      "root": "A#",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV7",
+      "role": "predominant",
+      "confidence": 0.109,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 157,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 1.74,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 331.233,
+      "end": 332.51,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7",
+      "role": "dominant",
+      "confidence": 0.071,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 158,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.39,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 332.51,
+      "end": 338.593,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.056,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 158,
+        "beat_in_bar": 4,
+        "beats": 12,
+        "beat_fraction": 11.39,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 338.593,
+      "end": 339.917,
+      "chord": "A#maj7",
+      "root": "A#",
+      "quality": "maj7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IVmaj7",
+      "role": "predominant",
+      "confidence": 0.083,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "C",
+          "E",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 161,
+        "beat_in_bar": 3,
+        "beats": 2,
+        "beat_fraction": 2.48,
+        "pushed": true
+      },
+      "effect": "maj7 color \u2014 warm, dreamy, jazz-inflected"
+    },
+    {
+      "start": 339.917,
+      "end": 343.098,
+      "chord": "Fm6",
+      "root": "F",
+      "quality": "min6",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "i6",
+      "role": "tonic",
+      "confidence": 0.073,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "A#",
+          "B",
+          "C#",
+          "E",
+          "F#",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 162,
+        "beat_in_bar": 2,
+        "beats": 6,
+        "beat_fraction": 5.95,
+        "pushed": false
+      },
+      "effect": "m6 \u2014 bittersweet minor color"
+    },
+    {
+      "start": 343.098,
+      "end": 343.888,
+      "chord": "A#7",
+      "root": "A#",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV7",
+      "role": "predominant",
+      "confidence": 0.102,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C",
+          "C#",
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 163,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.48,
+        "pushed": false
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 343.888,
+      "end": 345.188,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7",
+      "role": "dominant",
+      "confidence": 0.049,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "B",
+          "C#",
+          "D",
+          "F",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 164,
+        "beat_in_bar": 1,
+        "beats": 2,
+        "beat_fraction": 2.43,
+        "pushed": true
+      },
+      "effect": "dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 345.188,
+      "end": 367.92,
+      "chord": "Dm7",
+      "root": "D",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "vi7",
+      "role": "tonic",
+      "confidence": 0.043,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A#",
+          "B",
+          "C#",
+          "D#",
+          "E",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 164,
+        "beat_in_bar": 4,
+        "beats": 44,
+        "beat_fraction": 42.55,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    },
+    {
+      "start": 367.92,
+      "end": 369.801,
+      "chord": "A#m6",
+      "root": "A#",
+      "quality": "min6",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "iv6",
+      "role": "predominant",
+      "confidence": 0.09,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "A",
+          "C"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 175,
+        "beat_in_bar": 3,
+        "beats": 3,
+        "beat_fraction": 3.52,
+        "pushed": false
+      },
+      "effect": "m6 \u2014 bittersweet minor color"
+    },
+    {
+      "start": 369.801,
+      "end": 370.335,
+      "chord": "D7",
+      "root": "D",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "V7/ii",
+      "role": "tonic",
+      "confidence": 0.07,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "C",
+          "C#",
+          "D",
+          "D#",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "C#",
+          "D#",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 176,
+        "beat_in_bar": 3,
+        "beats": 1,
+        "beat_fraction": 1.0,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into Gm; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 370.335,
+      "end": 371.38,
+      "chord": "Gm",
+      "root": "G",
+      "quality": "min",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "G",
+      "roman": "ii",
+      "role": "predominant",
+      "confidence": 0.119,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "closed",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 176,
+        "beat_in_bar": 4,
+        "beats": 2,
+        "beat_fraction": 1.96,
+        "pushed": false
+      }
+    },
+    {
+      "start": 371.38,
+      "end": 375.188,
+      "chord": "Csus4",
+      "root": "C",
+      "quality": "sus4",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "Vsus4",
+      "role": "dominant",
+      "confidence": 0.237,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [
+          "B"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 177,
+        "beat_in_bar": 2,
+        "beats": 8,
+        "beat_fraction": 7.13,
+        "pushed": false
+      },
+      "effect": "suspended \u2014 floating, delays resolution"
+    },
+    {
+      "start": 375.188,
+      "end": 376.001,
+      "chord": "C7",
+      "root": "C",
+      "quality": "7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "C",
+      "roman": "V7/I",
+      "role": "dominant",
+      "confidence": 0.054,
+      "voicing": {
+        "pitch_classes": [
+          "B",
+          "C",
+          "E",
+          "F#",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "B",
+          "F#",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 179,
+        "beat_in_bar": 1,
+        "beats": 1,
+        "beat_fraction": 1.52,
+        "pushed": false
+      },
+      "effect": "secondary dominant \u2014 builds tension that resolves into F; dominant 7th \u2014 bluesy forward drive"
+    },
+    {
+      "start": 376.001,
+      "end": 378.485,
+      "chord": "F",
+      "root": "F",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "F",
+      "roman": "I",
+      "role": "tonic",
+      "confidence": 0.104,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "extensions": [],
+        "spacing": "open",
+        "added_notes": [
+          "E",
+          "G"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 179,
+        "beat_in_bar": 2,
+        "beats": 5,
+        "beat_fraction": 4.65,
+        "pushed": true
+      }
+    },
+    {
+      "start": 378.485,
+      "end": 389.515,
+      "chord": "A#",
+      "root": "A#",
+      "quality": "maj",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": "A#",
+      "roman": "IV",
+      "role": "predominant",
+      "confidence": 0.131,
+      "voicing": {
+        "pitch_classes": [
+          "A#",
+          "F"
+        ],
+        "extensions": [],
+        "spacing": "spread",
+        "added_notes": [],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 180,
+        "beat_in_bar": 3,
+        "beats": 0,
+        "beat_fraction": 20.64,
+        "pushed": false
+      }
+    },
+    {
+      "start": 389.515,
+      "end": 391.465,
+      "chord": "Bm7",
+      "root": "B",
+      "quality": "min7",
+      "inversion": 0,
+      "inversion_name": "root position",
+      "bass": null,
+      "roman": "#v7",
+      "role": "dominant",
+      "confidence": 0.035,
+      "voicing": {
+        "pitch_classes": [
+          "A",
+          "A#",
+          "B",
+          "C",
+          "C#",
+          "D",
+          "E",
+          "F",
+          "F#",
+          "G",
+          "G#"
+        ],
+        "extensions": [],
+        "spacing": "cluster",
+        "added_notes": [
+          "A#",
+          "C",
+          "C#",
+          "E",
+          "F",
+          "G",
+          "G#"
+        ],
+        "confidence": 0.7
+      },
+      "rhythm": {
+        "bar": 180,
+        "beat_in_bar": 3,
+        "beats": 0,
+        "beat_fraction": 3.65,
+        "pushed": false
+      },
+      "effect": "m7 color \u2014 mellow, restrained"
+    }
+  ],
+  "notes": []
+}
