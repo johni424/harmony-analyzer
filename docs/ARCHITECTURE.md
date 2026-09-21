@@ -1,7 +1,130 @@
 # Architecture
 
-**Status:** v1.0 · **Last updated:** 2026-09-21
+**Status:** v1.1 · **Last updated:** 2026-09-21
 Master document: [TECHNICAL_SPECIFICATION.md](TECHNICAL_SPECIFICATION.md) §4–8.
+
+## Canonical pipeline (the 14-stage view)
+
+This is the reference picture of the app. Every stage below maps to a real
+module — see the table underneath for the exact binding.
+
+```
+                    ┌──────────────────────┐
+                    │      USER INPUT      │
+                    │ MP3 / WAV / YouTube  │
+                    │ Spotify / FLAC       │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   1. INGESTION       │
+                    │ Audio + metadata     │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ 2. AUDIO PREPROCESS  │
+                    │ resample / normalize │
+                    │ HPSS / channels      │
+                    └──────────┬───────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+        ┌─────────┐      ┌──────────┐      ┌──────────┐
+        │ 3 BEAT  │      │ 4 CHROMA │      │ 5 BASS   │
+        │ / TEMPO │      │ / PITCH  │      │ TRACK    │
+        └────┬────┘      └────┬─────┘      └────┬─────┘
+             │                │                 │
+             └────────────────┼─────────────────┘
+                              ▼
+                    ┌──────────────────────┐
+                    │ 6 CHORD DETECTION    │
+                    │ candidate chords     │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ 7 HARMONIC EVENTS    │
+                    │ segmentation         │
+                    └──────────┬───────────┘
+                               │
+                  ┌────────────┼────────────┐
+                  ▼            ▼            ▼
+             ┌────────┐  ┌──────────┐  ┌──────────┐
+             │ 8 BASS │  │ 9 VOICING│  │10 RHYTHM │
+             │/INVERS │  │          │  │          │
+             └────┬───┘  └────┬─────┘  └────┬─────┘
+                  └────────────┼─────────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │ 11 KEY DETECTION      │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │ 12 ROMAN NUMERALS    │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │ 13 FUNCTION ENGINE    │
+                    │ secondary dominants  │
+                    │ borrowed chords      │
+                    │ cadences / modulation│
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │ 14 CONFIDENCE ENGINE │
+                    └──────────┬───────────┘
+                               ▼
+                    ┌──────────────────────┐
+                    │ CANONICAL ANALYSIS   │
+                    │ JSON                 │
+                    └──────────┬───────────┘
+                               │
+                 ┌─────────────┼─────────────┐
+                 ▼             ▼             ▼
+             Terminal        API           Frontend
+                              │
+                              ▼
+                         Web Application
+```
+
+### Stage → code binding
+
+| # | Diagram stage | Implementation | Notes |
+|---|---|---|---|
+| 1 | Ingestion | `ingest.resolve` | yt-dlp → WAV; Spotify resolved via oEmbed → YouTube search |
+| 2 | Audio preprocess | `chroma.load_audio` + `chroma.extract_features` | 22.05 kHz mono, HPSS percussive/harmonic split, CQT |
+| 3 | Beat / tempo | `rhythm.analyze_rhythm` | data-parallel with 4/5; *executes* in the late `rhythm` stage — see execution order below |
+| 4 | Chroma / pitch | `chroma.extract_features` | recognition + bass chroma variants from one CQT |
+| 5 | Bass track | `chroma` (bass variant) extracted here, labeled at stage 8 | low-register weighting |
+| 6 | Chord detection | `chords.viterbi_chords` | 180 weighted templates, HMM/Viterbi ([ADR-003](ADR/ADR-003-viterbi-chord-decoder.md)) |
+| 7 | Harmonic events | segment merge + `pipeline._snap_boundaries` | < 0.6 s segments absorbed; boundaries snapped to chroma flux (±0.3 s) |
+| 8 | Bass / inversion | `bass.label_inversions` | honesty gates before claiming any inversion |
+| 9 | Voicing | `voicing.analyze_voicing` | sounding pitch classes, extensions, register/spacing |
+| 10 | Rhythm | `rhythm.align_chords_to_beats` | bar / beat_in_bar / beats / pushed |
+| 11 | Key detection | `function.detect_key` | Krumhansl–Kessler profiles, one global key |
+| 12 | Roman numerals | `function.roman_numeral` | applied inside `annotate_functions` |
+| 13 | Function engine | `function.annotate_functions` | cadences, secondary dominants, tritone subs, borrowed chords, bass-line/pickup/retake devices |
+| 14 | Confidence engine | softmax in `chords.py` + key correlation in `function.py` | ⚠️ distributed across stages, not a standalone module yet |
+| — | Canonical JSON | `models.AnalysisResult` → `report.json_report` | single serialization, all renderers consume it |
+| — | Terminal | `cli.py` → `report.terminal_report` | one-shot process |
+| — | API | `server.py` | job store **in memory** ([ADR-007](ADR/ADR-007-in-memory-state.md)) |
+| — | Frontend | Timeline Player (`report.py` HTML) served at `/player/{id}` | streams audio from `/audio/{id}` |
+
+### Execution order vs. the diagram
+
+The diagram is the **data-flow** view: stages 3/4/5 genuinely are independent
+branches, and 8/9/10 could run in any order. The code executes sequentially
+(`pipeline.analyze`), which is a deliberate simplicity choice for a
+single-threaded-per-job design:
+
+```
+ingest → features(2+4+5) → decode(6+7) → harmony(8+9+11+12+13) → rhythm(3+10) → result
+```
+
+Beat/tempo (3) runs **last** and is optional: chord decoding is tempo-adaptive,
+so it never needs the grid, and non-percussive material simply gets no rhythm
+fields (honest absence, documented in the spec).
 
 ## Module map
 
@@ -51,6 +174,24 @@ per job.
 - **CLI**: one-shot process per analysis.
 - No external services except: YouTube (via yt-dlp) and Spotify oEmbed during
   ingest, when the source is a URL.
+
+## In-memory state (by design)
+
+All application state lives in process memory. Nothing is persisted between
+restarts, and that is a documented decision — [ADR-007](ADR/ADR-007-in-memory-state.md):
+
+- **Job store**: `JOBS: dict[str, Job]` in `server.py`, guarded by
+  `JOBS_LOCK`, capped at `MAX_JOBS = 40`; finished jobs are pruned
+  oldest-first to make room.
+- **Analysis workers**: daemon threads of the uvicorn process — one job, one
+  thread, no worker pool, no queue outside memory.
+- **Artifacts**: per-job audio + player data live in a per-job directory under
+  the OS temp dir (never the repo, never durable). The only durable output is
+  what the user explicitly exports (JSON/PDF/standalone HTML).
+- **No database, no sessions, no external cache.** A server restart clears all
+  jobs — acceptable for v1 because results are re-derivable from the source in
+  ~1 minute, and it keeps the deployment a single `harmony-web` command with
+  zero state to manage.
 
 ## Key invariants (enforced by tests)
 
