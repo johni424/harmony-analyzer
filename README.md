@@ -39,6 +39,24 @@ uv pip install --python .venv/bin/python -e . yt-dlp pytest
 .venv/bin/harmony song.flac --flats --md report.md
 ```
 
+## Web UI (landing page + player)
+
+A local web app where you paste a YouTube/Spotify link or drop an audio file,
+watch the analysis progress, then explore the result in the interactive player.
+
+```bash
+# one-time: install the web extras
+uv pip install --python .venv/bin/python -e ".[web]"
+
+# start the server on http://127.0.0.1:8600
+.venv/bin/harmony-web            # or: .venv/bin/python -m harmony.server
+```
+
+Then open <http://127.0.0.1:8600> — two tabs: **link** or **upload**. Jobs run
+in the background; the page polls progress through the pipeline stages
+(audio → features → chords → inversions & voicing → beat grid → player) and
+links to the full Timeline Player when done.
+
 ## Output formats
 
 | Flag | Format |
@@ -108,10 +126,30 @@ bass lines). On real-world recordings expect:
 - moderate reliability on dense mixes, extended chords and fast changes
 - extension detection (9/11/13) is heuristic — check the confidence values
 
+## Documentation
+
+Full engineering docs live in [`docs/`](docs/TECHNICAL_SPECIFICATION.md),
+grounded in the actual implementation with a code-to-spec gap analysis
+(✅ implemented · 🟡 partial · 🔴 missing · ⚠️ risky · 🧪 needs validation · 💡 future):
+
+| Doc | Contents |
+|---|---|
+| [TECHNICAL_SPECIFICATION.md](docs/TECHNICAL_SPECIFICATION.md) | master spec — 30 sections: product, system, music intelligence, data, quality, business |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | module map, data flow, invariants, failure isolation |
+| [AUDIO_PIPELINE.md](docs/AUDIO_PIPELINE.md) | CQT front end, sharpening, chroma variants, onset envelope |
+| [HARMONIC_MODEL.md](docs/HARMONIC_MODEL.md) | templates, Viterbi, bass/inversion gates, voicing, key/function, rhythm |
+| [API.md](docs/API.md) | HTTP surface, job lifecycle, error model |
+| [JSON_SCHEMA.md](docs/JSON_SCHEMA.md) | canonical output schema + machine-checkable invariants |
+| [EVALUATION.md](docs/EVALUATION.md) | metrics, completed real-mix evaluations, dataset plan |
+| [TESTING.md](docs/TESTING.md) | what each test suite guarantees, known gaps |
+| [LICENSING.md](docs/LICENSING.md) | copyright position, third-party licenses, audio-handling rules |
+| [ROADMAP.md](docs/ROADMAP.md) | v1.1 → v2.0 sequenced plan |
+| [docs/ADR/](docs/ADR/) | architecture decision records (chroma, bass separation, Viterbi, event model, no source separation, streamed player) |
+
 ## Tests
 
 ```bash
-.venv/bin/python -m pytest -q          # 24 tests: units + synthetic end-to-end
+.venv/bin/python -m pytest -q          # 31 tests: units + server + synthetic end-to-end
 ```
 
 The end-to-end test renders a I–V7–vi–IV progression (including a first-
@@ -120,6 +158,7 @@ inversion V7) to a wav and asserts the full pipeline recovers it.
 ## Project layout
 
 ```
+docs/           # engineering documentation (see table above)
 src/harmony/
 ├── models.py     # dataclasses: Chord, VoicingInfo, KeyEstimate, AnalysisResult
 ├── chroma.py     # CQT features, PSF deconvolution, chroma variants

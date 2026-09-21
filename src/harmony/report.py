@@ -786,8 +786,13 @@ def _print_document(result: AnalysisResult, sharp: bool) -> str:
     )
 
 
-def html_report(result: AnalysisResult, sharp: bool = True) -> str:
-    """Standalone interactive Timeline Player (audio-embedded when available)."""
+def html_report(result: AnalysisResult, sharp: bool = True,
+                audio_src: str | None = None) -> str:
+    """Standalone interactive Timeline Player (audio-embedded when available).
+
+    audio_src: optional URL for the audio (e.g. "/audio/<job>"). When given it
+    replaces the base64 data URI, so web players stream instead of embedding.
+    """
     chords_data = []
     for c in result.chords:
         vc = c.voicing
@@ -813,8 +818,8 @@ def html_report(result: AnalysisResult, sharp: bool = True) -> str:
             "fncls": _color_classes(c.role, c.effect),
         })
 
-    audio_uri = None
-    if result.audio_path:
+    audio_uri = audio_src
+    if audio_uri is None and result.audio_path:
         p = Path(result.audio_path)
         if p.exists():
             mime = _audio_mime(p)

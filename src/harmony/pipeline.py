@@ -9,16 +9,34 @@ from . import bass, chroma, chords, function, ingest, rhythm, voicing
 from .models import AnalysisResult, Chord
 
 
-def analyze(source: str, verbose: bool = False, keep_audio: bool = False) -> AnalysisResult:
+def analyze(source: str, verbose: bool = False, keep_audio: bool = False,
+            on_stage=None) -> AnalysisResult:
     """Analyze a song from a URL or file path and return the full result.
 
     keep_audio: if True, the local audio file backing the analysis is
     referenced in the result (AnalysisResult.audio_path) so the HTML player
     can embed it for playback sync.
+
+    on_stage: optional callback(stage: str, done: bool) invoked when each
+    pipeline stage starts (done=False) and finishes (done=True) — used by the
+    web server to report progress.
     """
+    def _stage(name: str) -> None:
+        if on_stage:
+            try:
+                on_stage(name, False)
+            except Exception:
+                pass
+
     t0 = time.time()
 
+    _stage("ingest")
     path, title, resolved_source = ingest.resolve(source)
+    if on_stage:
+        try:
+            on_stage("ingest", True)
+        except Exception:
+            pass
     if verbose:
         print(f"[{time.time() - t0:5.1f}s] loaded: {path}")
 
@@ -26,12 +44,24 @@ def analyze(source: str, verbose: bool = False, keep_audio: bool = False) -> Ana
     duration = len(y) / sr
     title = ingest.best_title(path, source, title)
 
+    _stage("features")
     features = chroma.extract_features(y, sr)
+    if on_stage:
+        try:
+            on_stage("features", True)
+        except Exception:
+            pass
     if verbose:
         print(f"[{time.time() - t0:5.1f}s] features: chroma {features.chroma.shape}")
 
+    _stage("decode")
     tempo = None  # beat tracking is optional; template/Viterbi is tempo-adaptive
     raw = chords.viterbi_chords(features.recognition_chroma, features.times, tempo)
+    if on_stage:
+        try:
+            on_stage("decode", True)
+        except Exception:
+            pass
     if verbose:
         print(f"[{time.time() - t0:5.1f}s] chord decoding: {len(raw)} segments")
 
@@ -49,13 +79,20 @@ def analyze(source: str, verbose: bool = False, keep_audio: bool = False) -> Ana
     _snap_boundaries(chord_objs, features.recognition_chroma, times)
 
     # Post-processing: inversions, voicing, functional analysis.
+    _stage("harmony")
     bass.label_inversions(chord_objs, features, times)
     for c in chord_objs:
         c.voicing = voicing.analyze_voicing(c, features, times)
     key = function.detect_key(chord_objs)
     function.annotate_functions(chord_objs, key)
+    if on_stage:
+        try:
+            on_stage("harmony", True)
+        except Exception:
+            pass
 
     # Rhythmic analysis: beat grid + meter; chords get bar/beat placement.
+    _stage("rhythm")
     rhythm_info = None
     try:
         rhythm_info = rhythm.analyze_rhythm(y, sr)
@@ -63,6 +100,17 @@ def analyze(source: str, verbose: bool = False, keep_audio: bool = False) -> Ana
         rhythm_info = None  # non-percussive / rubato material: no grid
     if rhythm_info is not None:
         rhythm.align_chords_to_beats(chord_objs, rhythm_info)
+    if on_stage:
+        try:
+            on_stage("rhythm", True)
+        except Exception:
+            pass
+
+    if on_stage:
+        try:
+            on_stage("done", True)
+        except Exception:
+            pass
 
     return AnalysisResult(
         title=title,
