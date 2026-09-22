@@ -159,7 +159,10 @@ grounded in the actual implementation with a code-to-spec gap analysis
 ## Tests
 
 ```bash
-.venv/bin/python -m pytest -q          # 55 tests: units + contract + server + synthetic end-to-end
+.venv/bin/python -m pytest -q          # 71 tests: units + contract + server + eval harness + end-to-end
+
+# evaluate accuracy against the ground-truth dataset (offline, no network)
+.venv/bin/harmony-eval datasets/synthetic.json --out eval/synthetic
 ```
 
 The end-to-end test renders a I–V7–vi–IV progression (including a first-

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "axis_c_major",
+    "kind": "synthetic",
+    "genre": "pop",
+    "key": "C major",
+    "tempo": 100.0,
+    "meter": 4,
+    "chords": [
+      {"symbol": "C", "start": 0.0, "duration": 2.4},
+      {"symbol": "G", "start": 2.4, "duration": 2.4},
+      {"symbol": "Am", "start": 4.8, "duration": 2.4},
+      {"symbol": "F", "start": 7.2, "duration": 2.4}
+    ],
+    "render": {
+      "bpm": 100.0,
+      "meter": 4,
+      "clicks": true,
+      "chords": [
+        {"tones": ["C", "E", "G"], "bass": "C", "start_beat": 0.0, "dur_beats": 4.0},
+        {"tones": ["G", "B", "D"], "bass": "G", "start_beat": 4.0, "dur_beats": 4.0},
+        {"tones": ["A", "C", "E"], "bass": "A", "start_beat": 8.0, "dur_beats": 4.0},
+        {"tones": ["F", "A", "C"], "bass": "F", "start_beat": 12.0, "dur_beats": 4.0}
+      ]
+    }
+  },
+  {
+    "id": "doo_wop_c_major",
+    "kind": "synthetic",
+    "genre": "pop",
+    "key": "C major",
+    "tempo": 90.0,
+    "meter": 4,
+    "chords": [
+      {"symbol": "C", "start": 0.0, "duration": 2.667},
+      {"symbol": "Am", "start": 2.667, "duration": 2.667},
+      {"symbol": "F", "start": 5.333, "duration": 2.667},
+      {"symbol": "G", "start": 8.0, "duration": 2.667}
+    ],
+    "render": {
+      "bpm": 90.0,
+      "meter": 4,
+      "clicks": true,
+      "chords": [
+        {"tones": ["C", "E", "G"], "bass": "C", "start_beat": 0.0, "dur_beats": 4.0},
+        {"tones": ["A", "C", "E"], "bass": "A", "start_beat": 4.0, "dur_beats": 4.0},
+        {"tones": ["F", "A", "C"], "bass": "F", "start_beat": 8.0, "dur_beats": 4.0},
+        {"tones": ["G", "B", "D"], "bass": "G", "start_beat": 12.0, "dur_beats": 4.0}
+      ]
+    }
+  },
+  {
+    "id": "inversions_c_major",
+    "kind": "synthetic",
+    "genre": "classical",
+    "key": "C major",
+    "tempo": 80.0,
+    "meter": 4,
+    "chords": [
+      {"symbol": "C", "start": 0.0, "duration": 3.0},
+      {"symbol": "G/B", "start": 3.0, "duration": 3.0},
+      {"symbol": "C/E", "start": 6.0, "duration": 3.0},
+      {"symbol": "F/A", "start": 9.0, "duration": 3.0}
+    ],
+    "render": {
+      "bpm": 80.0,
+      "meter": 4,
+      "clicks": true,
+      "chords": [
+        {"tones": ["C", "E", "G"], "bass": "C", "start_beat": 0.0, "dur_beats": 4.0},
+        {"tones": ["G", "B", "D"], "bass": "B", "start_beat": 4.0, "dur_beats": 4.0},
+        {"tones": ["C", "E", "G"], "bass": "E", "start_beat": 8.0, "dur_beats": 4.0},
+        {"tones": ["F", "A", "C"], "bass": "A", "start_beat": 12.0, "dur_beats": 4.0}
+      ]
+    }
+  },
+  {
+    "id": "sevenths_c_major",
+    "note": "measured engine limitation (2026-09): pure-tone 7th fixtures lose the 7th partial to triads — detected qualities are triads; family/root accuracy is the honest lens here",
+    "kind": "synthetic",
+    "genre": "jazz",
+    "key": "C major",
+    "tempo": 120.0,
+    "meter": 4,
+    "chords": [
+      {"symbol": "Dm7", "start": 0.0, "duration": 2.0},
+      {"symbol": "G7", "start": 2.0, "duration": 2.0},
+      {"symbol": "Cmaj7", "start": 4.0, "duration": 2.0},
+      {"symbol": "Am7", "start": 6.0, "duration": 2.0}
+    ],
+    "render": {
+      "bpm": 120.0,
+      "meter": 4,
+      "clicks": true,
+      "chords": [
+        {"tones": ["D", "F", "A", "C"], "bass": "D", "start_beat": 0.0, "dur_beats": 4.0},
+        {"tones": ["G", "B", "D", "F"], "bass": "G", "start_beat": 4.0, "dur_beats": 4.0},
+        {"tones": ["C", "E", "G", "B"], "bass": "C", "start_beat": 8.0, "dur_beats": 4.0},
+        {"tones": ["A", "C", "E", "G"], "bass": "A", "start_beat": 12.0, "dur_beats": 4.0}
+      ]
+    }
+  },
+  {
+    "id": "minor_loop_e",
+    "kind": "synthetic",
+    "genre": "rock",
+    "key": "E minor",
+    "key_alt": ["G major"],
+    "tempo": 110.0,
+    "meter": 4,
+    "chords": [
+      {"symbol": "Em", "start": 0.0, "duration": 2.182},
+      {"symbol": "C", "start": 2.182, "duration": 2.182},
+      {"symbol": "G", "start": 4.364, "duration": 2.182},
+      {"symbol": "D", "start": 6.545, "duration": 2.182}
+    ],
+    "render": {
+      "bpm": 110.0,
+      "meter": 4,
+      "clicks": true,
+      "chords": [
+        {"tones": ["E", "G", "B"], "bass": "E", "start_beat": 0.0, "dur_beats": 4.0},
+        {"tones": ["C", "E", "G"], "bass": "C", "start_beat": 4.0, "dur_beats": 4.0},
+        {"tones": ["G", "B", "D"], "bass": "G", "start_beat": 8.0, "dur_beats": 4.0},
+        {"tones": ["D", "F#", "A"], "bass": "D", "start_beat": 12.0, "dur_beats": 4.0}
+      ]
+    }
+  },
+  {
+    "id": "waltz_f_major",
+    "kind": "synthetic",
+    "genre": "folk",
+    "key": "F major",
+    "tempo": 140.0,
+    "meter": 3,
+    "chords": [
+      {"symbol": "F", "start": 0.0, "duration": 1.286},
+      {"symbol": "Bb", "start": 1.286, "duration": 1.286},
+      {"symbol": "C", "start": 2.571, "duration": 1.286}
+    ],
+    "render": {
+      "bpm": 140.0,
+      "meter": 3,
+      "clicks": true,
+      "chords": [
+        {"tones": ["F", "A", "C"], "bass": "F", "start_beat": 0.0, "dur_beats": 3.0},
+        {"tones": ["Bb", "D", "F"], "bass": "Bb", "start_beat": 3.0, "dur_beats": 3.0},
+        {"tones": ["C", "E", "G"], "bass": "C", "start_beat": 6.0, "dur_beats": 3.0}
+      ]
+    }
+  }
+]

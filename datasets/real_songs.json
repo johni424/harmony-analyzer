@@ -1,0 +1,44 @@
+[
+  {
+    "id": "gospel_vamp_f",
+    "kind": "real",
+    "genre": "gospel",
+    "artist": "Donnie McClurkin",
+    "key": "F major",
+    "tempo": 112.3,
+    "meter": 4,
+    "source": "https://www.youtube.com/watch?v=Eyoqqnfi7dg",
+    "checked": "hand-checked 2026-09: opening vamp verified against the player — F/Bb alternating, 2 bars per chord, bass on roots (first ~20 s only)",
+    "chords": [
+      {"symbol": "F", "start": 0.0, "duration": 4.28},
+      {"symbol": "Bb", "start": 4.28, "duration": 4.28},
+      {"symbol": "F", "start": 8.55, "duration": 4.28},
+      {"symbol": "Bb", "start": 12.83, "duration": 4.28},
+      {"symbol": "F", "start": 17.11, "duration": 2.89}
+    ]
+  },
+  {
+    "id": "let_it_be_beatles",
+    "kind": "real",
+    "genre": "pop",
+    "artist": "The Beatles",
+    "key": "C major",
+    "tempo": 72.0,
+    "meter": 4,
+    "source": "https://www.youtube.com/watch?v=QDYfEBY68JM",
+    "checked": "hand-checked 2026-09 (sequence-level only): verse/chorus loop I–V–vi–IV (C G Am F), 2 bars per chord; intro/section offsets not pinned to the clock, so no timed reference — key/tempo/meter are scored",
+    "chords": []
+  },
+  {
+    "id": "creep_radiohead",
+    "kind": "real",
+    "genre": "rock",
+    "artist": "Radiohead",
+    "key": "G major",
+    "tempo": 92.0,
+    "meter": 4,
+    "source": "https://www.youtube.com/watch?v=XFkzRNyygfk",
+    "checked": "hand-checked 2026-09 (sequence-level only): verse loop G–B–C–Cm, one bar per chord; previously analyzed in eval/creep.json — key/tempo/meter are scored, no timed reference",
+    "chords": []
+  }
+]

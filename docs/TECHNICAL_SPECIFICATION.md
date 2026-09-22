@@ -488,25 +488,32 @@ of the model.
 - 🟡 Gaps: no structured logging, no retry/backoff on yt-dlp, no
   Sentry/equivalent telemetry.
 
-## 24. Evaluation dataset 🧪
+## 24. Evaluation dataset ✅/🟡
 
-Today: two reference analyses under `eval/` (Radiohead — *Creep*; a dense
-gospel production) with before/after JSONs and findings in
-[eval/EVALUATION.md](../eval/EVALUATION.md). That was enough to drive three
-real defect fixes (bass register weights, inversion dominance gate, spill
-modeling) — it is **not** enough to claim accuracy. Target (see
-[EVALUATION.md](EVALUATION.md)): a 50–100-song labeled set spanning genres,
-with chord + bass annotations, scored for root/quality/inversion accuracy and
-confidence calibration.
+The harness is built (step 25): `harmony/evaluation.py` + the `harmony-eval`
+entry point score root/family/chord accuracy, bass agreement, boundary
+precision, tempo (octave-folded ±4 %), meter, key, and confidence
+calibration (Brier), per case and per genre bucket. Two dataset layers live
+in `datasets/`: six synthetic cases (exact ground truth, rendered at eval
+time, hermetic) and a hand-checked real-songs manifest (audio fetched on
+demand, never committed). Synthetic baseline 2026-09: root 0.986, bass
+0.995, key 1.0 — and three **measured** limitations: meter detection fails
+on chord material (transient-contaminated normalization), synthesized 7ths
+drop their 7th, and absolute confidence calibration is poor (Brier ≈ 0.53
+on always-correct cases). Details and next fixes:
+[EVALUATION.md](EVALUATION.md). The 50–100-song target is now a matter of
+adding manifest rows, not building tooling.
 
 ## 25. Testing strategy ✅
 
-31 tests across six suites (`tests/`): chord decoding (synthetic chroma),
+71 tests across nine suites (`tests/`): chord decoding (synthetic chroma),
 bass/inversion gates, function/roman logic, rhythm (synthetic click track +
 meter), server (upload → poll → player via TestClient), end-to-end (synthesized
-multi-chord audio through the whole pipeline). What each suite guarantees:
-[TESTING.md](TESTING.md). Gaps: 🟡 no golden-file test on a real-mix fixture,
-🔴 no CI workflow yet (tests run locally), 🔴 no performance regression test.
+multi-chord audio through the whole pipeline), schema contract (step 20),
+trust engines (step 19), and the evaluation harness (step 25). What each
+suite guarantees: [TESTING.md](TESTING.md). Remaining gaps: 🟡 no golden-file
+test on a real-mix fixture, 🔴 no CI workflow yet (tests run locally). The
+performance-regression gap is closed (budget test, < 3× realtime).
 
 ## 26. Security 🔴 (hardening) / 🟡 (baseline)
 

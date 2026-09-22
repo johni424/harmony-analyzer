@@ -27,6 +27,7 @@ dev = ["pytest>=8"]
 [project.scripts]
 harmony = "harmony.cli:main"
 harmony-web = "harmony.server:main"
+harmony-eval = "harmony.evaluation:main"
 
 [build-system]
 requires = ["hatchling"]
