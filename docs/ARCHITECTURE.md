@@ -141,9 +141,10 @@ fields (honest absence, documented in the spec).
 | `rhythm.py` | 173 | Onset envelope → beat grid → meter/downbeats → chord↔beat alignment |
 | `confidence.py` | 147 | Per-dimension trust scores from existing stage evidence (plan step 19) |
 | `dna.py` | 214 | Named-progression matching, device tallies, song signature (plan step 18) |
+| `schema.py` | 71 | Frozen JSON-Schema contract loader/validator (plan step 20) |
 | `pipeline.py` | 175 | Stage orchestration (`on_stage` progress hook), boundary snapping, trust stage |
 | `report.py` | 874 | Terminal/JSON/Markdown renderers + the full Timeline Player HTML template |
-| `server.py` | 546 | FastAPI web app: landing page, job store, player/audio routes |
+| `server.py` | 597 | FastAPI web app: landing page, job store, player/audio routes, `/api/v1` contract endpoints |
 | `cli.py` | 57 | Typer CLI (`harmony`) |
 
 ## Data flow (one analysis)

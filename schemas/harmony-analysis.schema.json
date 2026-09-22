@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/johni424/harmony-analyzer/schemas/harmony-analysis.schema.json",
+  "title": "Harmony Analyzer — canonical analysis report",
+  "description": "Emitted by harmony.report.json_report(). Versioned per docs/JSON_SCHEMA.md; additive changes bump minor, breaking changes bump major.",
+  "type": "object",
+  "required": ["title", "source", "duration", "key", "tempo", "rhythm", "chords", "notes"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "source": {"type": "string"},
+    "duration": {"type": "number", "exclusiveMinimum": 0},
+    "tempo": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "key": {"$ref": "#/$defs/key"},
+    "rhythm": {"oneOf": [{"$ref": "#/$defs/rhythm"}, {"type": "null"}]},
+    "confidence": {"oneOf": [{"$ref": "#/$defs/confidence"}, {"type": "null"}]},
+    "dna": {"oneOf": [{"$ref": "#/$defs/dna"}, {"type": "null"}]},
+    "chords": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/chord"}}
+  },
+  "allOf": [
+    {
+      "if": {"required": ["chords"], "properties": {"chords": {"minItems": 1}}},
+      "then": {
+        "properties": {
+          "chords": {
+            "contains": {"properties": {"end": {"type": "number"}}},
+            "description": "first segment must start at 0 (segments tile the analyzed span)"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "key": {
+      "type": "object",
+      "required": ["name", "tonic", "mode", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string", "pattern": "^[A-G](#|b)? (major|minor)$"},
+        "tonic": {"$ref": "#/$defs/pitchName"},
+        "mode": {"enum": ["major", "minor"]},
+        "confidence": {"$ref": "#/$defs/unitInterval"}
+      }
+    },
+    "rhythm": {
+      "type": "object",
+      "required": ["tempo", "meter", "confidence", "beat_times", "downbeats"],
+      "additionalProperties": false,
+      "properties": {
+        "tempo": {"type": "number", "exclusiveMinimum": 0},
+        "meter": {"type": "integer", "minimum": 2, "maximum": 7},
+        "confidence": {"$ref": "#/$defs/unitInterval"},
+        "beat_times": {"type": "array", "items": {"type": "number", "minimum": 0}},
+        "downbeats": {
+          "type": "array",
+          "description": "indices into beat_times marking bar starts",
+          "items": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "description": "Per-dimension trust metrics; NOT a probability of correctness.",
+      "required": ["chord", "bass", "inversion", "voicing", "function", "rhythm", "overall"],
+      "additionalProperties": false,
+      "properties": {
+        "chord":     {"$ref": "#/$defs/unitInterval"},
+        "bass":      {"$ref": "#/$defs/unitInterval"},
+        "inversion": {"$ref": "#/$defs/unitInterval"},
+        "voicing":   {"$ref": "#/$defs/unitInterval"},
+        "function":  {"$ref": "#/$defs/unitInterval"},
+        "rhythm":    {"$ref": "#/$defs/unitInterval"},
+        "overall":   {"$ref": "#/$defs/unitInterval"}
+      }
+    },
+    "dna": {
+      "type": "object",
+      "description": "Harmonic DNA: named progressions + compositional devices.",
+      "required": ["signature", "devices", "matches"],
+      "additionalProperties": false,
+      "properties": {
+        "signature": {"type": "string", "minLength": 1},
+        "devices": {
+          "type": "object",
+          "description": "device name -> occurrence count",
+          "additionalProperties": {"type": "integer", "minimum": 1}
+        },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "numerals", "start", "end", "count", "annotation"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {"type": "string"},
+              "numerals": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+              "start": {"type": "number", "minimum": 0},
+              "end": {"type": "number", "exclusiveMinimum": 0},
+              "count": {"type": "integer", "minimum": 1},
+              "annotation": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "chord": {
+      "type": "object",
+      "required": ["start", "end", "chord", "root", "quality", "inversion",
+                    "inversion_name", "bass", "roman", "role", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "exclusiveMinimum": 0},
+        "chord": {
+          "type": "string",
+          "description": "Root[QualitySuffix][/Bass] in sharp spelling; 'N' = no chord. Suffix set mirrors _QUALITY_SUFFIX (maj → '').",
+          "pattern": "^(N|[A-G]#?(maj7#11|maj13|maj9|maj7|m7b13|m7b5|mMaj7|dim7|dim|aug|sus4|sus2|m13|m11|m9|m6|6|7#5|7b9|7#9|7alt|7sus4|13|9|7|m7|m)?(/[A-G]#?)?)$"
+       },
+        "root": {"$ref": "#/$defs/pitchName"},
+        "quality": {"$ref": "#/$defs/quality"},
+        "inversion": {"type": "integer", "minimum": 0, "maximum": 3},
+        "inversion_name": {
+          "enum": ["root position", "1st inversion", "2nd inversion", "3rd inversion"]
+        },
+        "bass": {"oneOf": [{"$ref": "#/$defs/pitchName"}, {"type": "null"}]},
+        "roman": {"type": ["string", "null"]},
+        "role": {"enum": ["tonic", "predominant", "dominant", "modal color", null]},
+        "confidence": {"$ref": "#/$defs/unitInterval"},
+        "voicing": {"$ref": "#/$defs/voicing"},
+        "rhythm": {"$ref": "#/$defs/chordRhythm"},
+        "effect": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"inversion": {"const": 0}}, "required": ["inversion"]},
+          "then": {"properties": {"inversion_name": {"const": "root position"}}}
+        },
+        {
+          "if": {"properties": {"inversion": {"const": 1}}, "required": ["inversion"]},
+          "then": {"properties": {"inversion_name": {"const": "1st inversion"}}}
+        },
+        {
+          "if": {"properties": {"inversion": {"const": 2}}, "required": ["inversion"]},
+          "then": {"properties": {"inversion_name": {"const": "2nd inversion"}}}
+        },
+        {
+          "if": {"properties": {"inversion": {"const": 3}}, "required": ["inversion"]},
+          "then": {"properties": {"inversion_name": {"const": "3rd inversion"}}}
+        },
+        {
+          "if": {"properties": {"inversion": {"enum": [1, 2, 3]}}, "required": ["inversion"]},
+          "then": {
+            "properties": {"bass": {"type": "string"}},
+            "description": "a claimed inversion implies a known, non-null bass"
+          }
+        }
+      ]
+    },
+    "voicing": {
+      "type": "object",
+      "required": ["pitch_classes", "extensions", "spacing", "added_notes", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "pitch_classes": {"type": "array", "items": {"$ref": "#/$defs/pitchName"}},
+        "extensions": {
+          "type": "array",
+          "description": "semitone intervals above root (b7=10, 9=2, 11=5, 13=9)",
+          "items": {"enum": [10, 2, 5, 9]}
+        },
+        "spacing": {"enum": ["single note", "cluster", "closed", "open", "spread", "unknown"]},
+        "added_notes": {"type": "array", "items": {"$ref": "#/$defs/pitchName"}},
+        "confidence": {"$ref": "#/$defs/unitInterval"}
+      }
+    },
+    "chordRhythm": {
+      "type": "object",
+      "required": ["bar", "beat_in_bar", "beats", "beat_fraction", "pushed"],
+      "additionalProperties": false,
+      "properties": {
+        "bar": {"type": "integer", "minimum": 1},
+        "beat_in_bar": {"type": "integer", "minimum": 1},
+        "beats": {"oneOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]},
+        "beat_fraction": {"oneOf": [{"type": "number", "exclusiveMinimum": 0}, {"type": "null"}]},
+        "pushed": {"type": "boolean"}
+      }
+    },
+    "pitchName": {
+      "type": "string",
+      "description": "sharp spelling",
+      "enum": ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    },
+    "quality": {
+      "description": "the decoder's chord-quality vocabulary",
+      "enum": ["maj", "min", "dim", "aug", "sus4", "sus2", "maj7", "min7", "7",
+               "hdim7", "dim7", "minmaj7", "maj6", "min6", "7sus4"]
+    },
+    "unitInterval": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}

@@ -434,6 +434,19 @@ inversion, inversion_name, bass, roman, role, confidence`, optional
 optional `rhythm{bar, beat_in_bar, beats, beat_fraction, pushed}`, optional
 `effect`.
 
+**Frozen contract (step 20):** `schemas/harmony-analysis.schema.json`
+(draft 2020-12, version 1.0.0) is the machine-checkable form of this section.
+`harmony/schema.py` loads it, metaschema-checks it once, and exposes
+`validate_payload()`; contract tests live in `tests/test_schema.py`. The
+versioned API enforces the contract at request time: `GET /api/v1/jobs/{id}/analysis`
+refuses to serve a document that fails validation (HTTP 500 with violation
+details) — a schema violation is a server-side incident, never silent client
+corruption. Schema changes: additive → minor bump, breaking → major bump.
+`docs/JSON_SCHEMA.md` documents each field; the five documented invariants
+(tiling, inversion⇒bass, all-or-nothing rhythm, roman consistency, voicing
+superset) are represented as `allOf`/`if-then` constraints where expressible
+in draft 2020-12.
+
 ## 21. Database schema 🔴 (v2 design)
 
 Current persistence is the filesystem (temp work dirs) — see §8. Planned

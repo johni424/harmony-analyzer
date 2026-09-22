@@ -62,6 +62,11 @@ in the background; the page polls progress through the pipeline stages
 (audio → features → chords → inversions & voicing → beat grid → player) and
 links to the full Timeline Player when done.
 
+**Programmatic API (v1, stable):** `GET /api/v1/schema` serves the frozen JSON
+Schema; `GET /api/v1/jobs/{id}/analysis` returns the full canonical analysis
+document (`{"schema_version": "1.0.0", "analysis": {…}}`) — never served
+when it fails the contract. See [docs/API.md](docs/API.md).
+
 ## Output formats
 
 | Flag | Format |
@@ -154,7 +159,7 @@ grounded in the actual implementation with a code-to-spec gap analysis
 ## Tests
 
 ```bash
-.venv/bin/python -m pytest -q          # 31 tests: units + server + synthetic end-to-end
+.venv/bin/python -m pytest -q          # 55 tests: units + contract + server + synthetic end-to-end
 ```
 
 The end-to-end test renders a I–V7–vi–IV progression (including a first-

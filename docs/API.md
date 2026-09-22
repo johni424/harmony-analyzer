@@ -80,13 +80,41 @@ support → `206 Partial Content`, enabling instant seeking). Mime by extension
 (`.m4a → audio/mp4`, `.wav → audio/wav`, …). `404` no audio · `410` file was
 cleaned up.
 
+## Versioned API (`/api/v1`) — stable contract
+
+The `/api/v1` namespace is the long-term surface: additive changes only,
+breaking changes require a new major prefix. The unversioned legacy routes
+above remain for the built-in web UI.
+
+### `GET /api/v1/schema`
+The frozen JSON Schema (`schemas/harmony-analysis.schema.json`) the analysis
+endpoint validates against, as JSON. Clients can codegen or validate locally.
+
+### `GET /api/v1/jobs/{job_id}/analysis`
+The full canonical analysis document (schema version + payload):
+
+```json
+{
+  "schema_version": "1.0.0",
+  "analysis": { "title": "…", "key": {…}, "chords": […], "confidence": {…}, "dna": {…} }
+}
+```
+
+Served from the persisted `analysis.json` artifact (re-derived from the live
+result if the artifact is missing/corrupt). **The endpoint never serves a
+document that fails the frozen contract** — a validation failure yields HTTP
+500 with `schema_version` + up to 20 violation strings.
+
 ## Error model
 
 | Status | Meaning |
 |---|---|
 | 202 | job accepted, poll `/api/jobs/{id}` |
 | 404 | unknown job id |
-| 409 | job exists but player not rendered yet |
+| 409 | job exists but player/analysis not ready yet |
+| 422 | invalid input (bad URL, unsupported file type, empty payload) |
+| 413 | upload exceeds 200 MB |
+| 500 | analysis document failed its schema contract (server-side bug, violation details in body) |
 | 410 | audio file cleaned up |
 | 413 | upload exceeds 200 MB |
 | 422 | malformed input (empty/blocked URL, unsupported file type) |

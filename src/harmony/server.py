@@ -10,6 +10,7 @@ interactive player. Run with:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import tempfile
 import threading
@@ -23,6 +24,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 
 from . import report
+from . import schema as schema_mod
 from .models import AnalysisResult
 from .pipeline import analyze
 
@@ -85,6 +87,13 @@ def _run_job(job: Job, source: str) -> None:
                                    audio_src=f"/audio/{job.id}")
         assert job.work_dir is not None
         (job.work_dir / "player.html").write_text(html)
+        # Canonical analysis document (step 20): one JSON write, schema-versioned.
+        try:
+            (job.work_dir / "analysis.json").write_text(
+                report.json_report(result), encoding="utf-8"
+            )
+        except Exception:
+            pass  # player still works; /api/v1 falls back to the live result
         job.result = result
         job.audio_path = result.audio_path
         job.stage = "done"
@@ -531,6 +540,47 @@ def audio(job_id: str) -> FileResponse:
         raise HTTPException(HTTPStatus.GONE, "Audio file was cleaned up.")
     return FileResponse(path, media_type=MIME_MAP.get(path.suffix.lower(), "application/octet-stream"),
                         filename=path.name)
+
+
+# --------------------------------------------------------------------------- #
+#  Versioned API (spec §22) — stable contract, additive changes only
+# --------------------------------------------------------------------------- #
+
+@app.get("/api/v1/schema")
+def get_schema() -> dict:
+    """The frozen JSON Schema this API validates analysis documents against."""
+    return schema_mod.load_schema()
+
+
+@app.get("/api/v1/jobs/{job_id}/analysis")
+def get_analysis(job_id: str) -> JSONResponse:
+    """Full canonical analysis document (never served when it fails the contract)."""
+    job = JOBS.get(job_id)
+    if job is None:
+        raise HTTPException(HTTPStatus.NOT_FOUND, "No such job.")
+    if job.result is None:
+        raise HTTPException(HTTPStatus.CONFLICT,
+                            f"Analysis not ready (stage: {job.stage}).")
+    doc_path = job.work_dir / "analysis.json" if job.work_dir else None
+    payload = None
+    if doc_path is not None and doc_path.exists():
+        try:
+            payload = json.loads(doc_path.read_text(encoding="utf-8"))
+        except Exception:
+            payload = None  # corrupt artifact → re-derive from the live result
+    if payload is None:
+        payload = json.loads(report.json_report(job.result))
+    errors = schema_mod.validate_payload(payload)
+    if errors:
+        raise HTTPException(
+            HTTPStatus.INTERNAL_SERVER_ERROR,
+            {"error": "analysis document failed its schema contract",
+             "schema_version": schema_mod.SCHEMA_VERSION_STRING, "violations": errors[:20]},
+        )
+    return JSONResponse({
+        "schema_version": schema_mod.SCHEMA_VERSION_STRING,
+        "analysis": payload,
+    })
 
 
 def main() -> None:

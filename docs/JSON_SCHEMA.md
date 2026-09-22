@@ -1,7 +1,11 @@
 # Canonical JSON Schema
 
-**Status:** v1.0 · **Last updated:** 2026-09-21
+**Status:** v1.0 · **Last updated:** 2026-09-22
 Master document: [TECHNICAL_SPECIFICATION.md](TECHNICAL_SPECIFICATION.md) §20.
+**Frozen machine-checkable form:** [`schemas/harmony-analysis.schema.json`](../schemas/harmony-analysis.schema.json)
+(draft 2020-12, `harmony/schema.py` validates against it; `/api/v1/schema`
+serves it; `tests/test_schema.py` enforces it). This page is the human
+reference for the same contract.
 Emitted by `report.json_report(result)`. The Markdown and HTML (player)
 reports derive from the same `AnalysisResult`; the web summary
 (`/api/jobs/{id}`) is a reduced projection.
