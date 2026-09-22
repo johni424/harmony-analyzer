@@ -260,6 +260,7 @@ footer { color: var(--dim); font-size: 13px; margin: 8px 0 30px; text-align: cen
       <div class="st" data-st="decode">chords</div>
       <div class="st" data-st="harmony">inversions & voicing</div>
       <div class="st" data-st="rhythm">beat grid</div>
+      <div class="st" data-st="trust">DNA & trust</div>
       <div class="st" data-st="render">player</div>
     </div>
     <div class="bar"><i id="barfill"></i></div>
@@ -366,7 +367,7 @@ $("go").onclick = async () => {
 };
 
 // progress ------------------------------------------------------------------
-const STAGES = ["ingest", "features", "decode", "harmony", "rhythm", "render"];
+const STAGES = ["ingest", "features", "decode", "harmony", "rhythm", "trust", "render"];
 function showProgress() {
   $("formcard").style.display = "none";
   $("progress").style.display = "";

@@ -148,6 +148,23 @@ class KeyEstimate:
 
 
 @dataclass
+class ConfidenceScores:
+    """Per-dimension trust metrics for one analysis (the confidence engine's output).
+
+    Each field is 0.0-1.0. `overall` combines the dimensions; it is NOT a
+    probability of correctness — see docs/HARMONIC_MODEL.md §confidence.
+    """
+
+    chord: float = 0.0  # chord quality/label evidence strength (mean emission margin)
+    bass: float = 0.0  # low-register evidence for the claimed bass/inversion
+    inversion: float = 0.0  # how unambiguous each claimed inversion is (root=1)
+    voicing: float = 0.0  # pitch-set stability inside segments
+    function: float = 0.0  # key-profile fit + diatonic coherence
+    rhythm: float = 0.0  # beat-grid coherence (0.0 when no grid was found)
+    overall: float = 0.0  # weighted combination of the above
+
+
+@dataclass
 class RhythmInfo:
     """Beat grid + meter estimated from the audio (rhythmic analysis stage).
 
@@ -172,6 +189,27 @@ class RhythmInfo:
 
 
 @dataclass
+class DnaMatch:
+    """One recognized progression pattern inside the Harmonic DNA report."""
+
+    name: str  # e.g. "I–V–vi–IV (axis)"
+    numerals: tuple[str, ...]  # roman numerals of the matched run
+    start: float  # seconds
+    end: float
+    count: int  # occurrences of this pattern in the song
+    annotation: str  # musical effect description
+
+
+@dataclass
+class DnaReport:
+    """Harmonic DNA (step 18): the song's identity at progression level."""
+
+    signature: str  # e.g. "I → V → vi → IV (axis)"
+    devices: dict[str, int] = field(default_factory=dict)  # e.g. {"borrowed chords": 3}
+    matches: list[DnaMatch] = field(default_factory=list)
+
+
+@dataclass
 class AnalysisResult:
     """Full analysis output for one song."""
 
@@ -184,6 +222,8 @@ class AnalysisResult:
     tempo: Optional[float] = None
     notes: list[str] = field(default_factory=list)
     rhythm: Optional[RhythmInfo] = None  # beat grid / meter, if detectable
+    confidence: Optional[ConfidenceScores] = None  # per-dimension trust metrics
+    dna: Optional[DnaReport] = None  # Harmonic DNA summary (signature progressions)
 
     def progression_symbols(self, sharp: bool = True) -> list[str]:
         return [c.symbol(sharp) for c in self.chords]

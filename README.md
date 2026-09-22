@@ -15,6 +15,11 @@ file and reports **exactly what is playing**:
   grid, and every chord's bar-and-beat placement ("bar 12, beat 2 · 4 beats,
   pushed entry"), with chord boundaries snapped to the beat grid so the
   harmonic and rhythmic views agree
+- the **Harmonic DNA** — the song's signature progression, named when it
+  matches a known pattern (the axis I–V–vi–IV, doo-wop, jazz ii–V–I, the
+  Andalusian descent, …) plus a device tally, and a per-dimension **trust
+  score** (chord labels, bass evidence, inversions, voicing, key/function,
+  beat grid) instead of a single opaque confidence number
 
 ## Quick start
 

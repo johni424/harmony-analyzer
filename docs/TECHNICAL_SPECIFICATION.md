@@ -371,20 +371,52 @@ snap to the grid; every chord gets `bar`, `beat_in_bar`, `beats` (grid count),
 `beat_fraction` (exact length in beats), and `pushed` (off-grid anticipatory
 entry).
 
-## 19. Confidence model ⚠️
+## 19. Confidence model ✅ + Harmonic DNA (step 18) ✅
 
-- **Chord confidence** = mean over the segment of a softmax posterior over
-  the 180 cosine emissions (temperature 0.045). Bounded below 1 by design.
-- **Key confidence** = Pearson correlation (scale-free, ~0.6–0.95 typical).
-- **Rhythm confidence** = relative downbeat-strength lift, clamped to [0, 1].
-- **Voicing confidence** = mean extension confidence (0.7 default when no
-  extensions).
+The trust layer is two engines run as the pipeline's final `trust` stage;
+both read only already-computed evidence, so a failure there can never sink
+the analysis.
+
+**Confidence (`confidence.py`, step 19).** Per-dimension scores, duration-
+weighted over the whole song:
+
+- **chord** = duration-weighted mean of the per-segment softmax posterior
+  over the 180 cosine emissions (temperature 0.045, bounded below 1 by design);
+- **bass** = share of the song whose bass pitch class was readable at all
+  (re-measured with the same weighted low-register chroma the bass stage used);
+- **inversion** = unambiguity of each bass claim: confirmed root position → 1,
+  claimed inversion → observed dominance / 3 (the claim gate is 1.8×),
+  unresolved bass → neutral 0.5 (uncertain, not wrong);
+- **voicing** = duration-weighted voicing confidence (0.7 default when no
+  extensions);
+- **function** = ½ key correlation + ½ diatonic share of the progression;
+- **rhythm** = beat-grid coherence (0.0 when no grid was found);
+- **overall** = fixed-weight blend (chord .35, function .20, bass .15,
+  voicing/inversion/rhythm .10 each).
 
 ⚠️ **Not calibrated across material.** On dense mixes the softmax flattens
 and absolute values read low (0.03–0.28 observed on a dense gospel
 production) while remaining rank-correct within the song. Do not compare
 confidence values *across* songs. Calibration (e.g. isotonic on labeled data)
 requires the evaluation dataset of §24 — 🧪.
+
+**Harmonic DNA (`dna.py`, step 18).** The song's identity at progression
+level, recomputed from plain roman numerals (immune to `V7/x` relabeling):
+
+- **signature** — the most characteristic loop, named when it matches one of
+  15 catalogued progressions (axis + rotations, doo-wop, jazz ii–V–I, classic
+  rock, mixolydian, aeolian epic, Andalusian, harmonic-minor cadence,
+  Pachelbel ground, circle-of-fifths descent, extended jazz loop, backdoor
+  ascent); else the most frequent recurring 2–3-gram ("song-specific"), else
+  the opening progression;
+- **devices** — per-song tallies of secondary dominants, tritone subs,
+  borrowed chords, pedal points, stepwise bass, cadences, Neapolitans,
+  suspensions, inversions, pushed entries, extended voicings;
+- **matches** — every named pattern found, with occurrence counts, the time
+  span of its first appearance, and a one-line musical annotation.
+
+Surfaced in JSON (`confidence`, `dna` blocks), Markdown, the terminal report,
+and a dedicated player card.
 
 ---
 

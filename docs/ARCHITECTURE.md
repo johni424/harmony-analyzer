@@ -105,7 +105,8 @@ module — see the table underneath for the exact binding.
 | 11 | Key detection | `function.detect_key` | Krumhansl–Kessler profiles, one global key |
 | 12 | Roman numerals | `function.roman_numeral` | applied inside `annotate_functions` |
 | 13 | Function engine | `function.annotate_functions` | cadences, secondary dominants, tritone subs, borrowed chords, bass-line/pickup/retake devices |
-| 14 | Confidence engine | softmax in `chords.py` + key correlation in `function.py` | ⚠️ distributed across stages, not a standalone module yet |
+| 14 | Confidence engine | `confidence.compute_confidence` | per-dimension trust scores (chord/bass/inversion/voicing/function/rhythm); failure-safe in the pipeline |
+| 15 | Harmonic DNA | `dna.analyze` | signature progression + named-pattern matches + device tallies (plan step 18) |
 | — | Canonical JSON | `models.AnalysisResult` → `report.json_report` | single serialization, all renderers consume it |
 | — | Terminal | `cli.py` → `report.terminal_report` | one-shot process |
 | — | API | `server.py` | job store **in memory** ([ADR-007](ADR/ADR-007-in-memory-state.md)) |
@@ -138,7 +139,9 @@ fields (honest absence, documented in the spec).
 | `voicing.py` | 144 | Sounding pitch classes, extension detection, added notes, register/spacing |
 | `function.py` | 269 | Key detection (KK profiles), roman numerals, roles, cadences, secondary dominants, tritone subs, borrowed chords, bass-line/pickup/retake devices |
 | `rhythm.py` | 173 | Onset envelope → beat grid → meter/downbeats → chord↔beat alignment |
-| `pipeline.py` | 155 | Stage orchestration (`on_stage` progress hook), boundary snapping |
+| `confidence.py` | 147 | Per-dimension trust scores from existing stage evidence (plan step 19) |
+| `dna.py` | 214 | Named-progression matching, device tallies, song signature (plan step 18) |
+| `pipeline.py` | 175 | Stage orchestration (`on_stage` progress hook), boundary snapping, trust stage |
 | `report.py` | 874 | Terminal/JSON/Markdown renderers + the full Timeline Player HTML template |
 | `server.py` | 546 | FastAPI web app: landing page, job store, player/audio routes |
 | `cli.py` | 57 | Typer CLI (`harmony`) |

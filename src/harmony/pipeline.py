@@ -5,7 +5,7 @@ import time
 
 import numpy as np
 
-from . import bass, chroma, chords, function, ingest, rhythm, voicing
+from . import bass, chroma, chords, confidence, dna, function, ingest, rhythm, voicing
 from .models import AnalysisResult, Chord
 
 
@@ -106,6 +106,24 @@ def analyze(source: str, verbose: bool = False, keep_audio: bool = False,
         except Exception:
             pass
 
+    # Trust layer (plan steps 18–19): Harmonic DNA + per-dimension confidence.
+    # Both read only already-computed evidence, so a failure here must never
+    # sink the analysis itself.
+    _stage("trust")
+    try:
+        scores = confidence.compute_confidence(chord_objs, features, times, key, rhythm_info)
+    except Exception:
+        scores = None
+    try:
+        dna_report = dna.analyze(chord_objs, key)
+    except Exception:
+        dna_report = None
+    if on_stage:
+        try:
+            on_stage("trust", True)
+        except Exception:
+            pass
+
     if on_stage:
         try:
             on_stage("done", True)
@@ -120,6 +138,8 @@ def analyze(source: str, verbose: bool = False, keep_audio: bool = False,
         chords=chord_objs,
         tempo=rhythm_info.tempo if rhythm_info else None,
         rhythm=rhythm_info,
+        confidence=scores,
+        dna=dna_report,
         audio_path=path if keep_audio else None,
     )
 

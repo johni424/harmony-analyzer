@@ -25,6 +25,16 @@ def terminal_report(result: AnalysisResult, sharp: bool = True) -> str:
     console.print(f"[bold]Source:[/bold] {result.source}  |  duration {result.duration:.1f}s"
                   + (f"  |  tempo {result.tempo:.0f} bpm" if result.tempo else ""))
     console.print(f"[bold]Key:[/bold] {key_name}  (confidence {result.key.confidence:.2f})")
+    if result.dna:
+        console.print(f"[bold]Harmonic DNA:[/bold] {result.dna.signature}")
+        if result.dna.devices:
+            console.print("[bold]Devices:[/bold] " + ", ".join(f"{k} ×{v}" for k, v in result.dna.devices.items()))
+    if result.confidence:
+        c = result.confidence
+        console.print(
+            f"[bold]Trust:[/bold] overall {c.overall:.2f} · chord {c.chord:.2f} · bass {c.bass:.2f} · "
+            f"inversion {c.inversion:.2f} · voicing {c.voicing:.2f} · function {c.function:.2f} · rhythm {c.rhythm:.2f}"
+        )
     console.print()
 
     table = Table(box=box.SIMPLE_HEAVY, show_lines=False, padding=(0, 1))
@@ -100,6 +110,34 @@ def json_report(result: AnalysisResult) -> str:
         "tempo": result.tempo,
         "rhythm": _rhythm_dict(result.rhythm),
         "chords": [chord_dict(c) for c in result.chords],
+        **({
+            "confidence": {
+                "chord": result.confidence.chord,
+                "bass": result.confidence.bass,
+                "inversion": result.confidence.inversion,
+                "voicing": result.confidence.voicing,
+                "function": result.confidence.function,
+                "rhythm": result.confidence.rhythm,
+                "overall": result.confidence.overall,
+            },
+        } if result.confidence else {}),
+        **({
+            "dna": {
+                "signature": result.dna.signature,
+                "devices": result.dna.devices,
+                "matches": [
+                    {
+                        "name": m.name,
+                        "numerals": list(m.numerals),
+                        "start": round(m.start, 2),
+                        "end": round(m.end, 2),
+                        "count": m.count,
+                        "annotation": m.annotation,
+                    }
+                    for m in result.dna.matches
+                ],
+            },
+        } if result.dna else {}),
         "notes": result.notes,
     }
     return json.dumps(payload, indent=2)
@@ -124,6 +162,17 @@ def markdown_report(result: AnalysisResult, sharp: bool = True) -> str:
         "",
         f"- **Key:** {key_name} (confidence {result.key.confidence:.2f})",
         f"- **Source:** {result.source} — {result.duration:.1f}s",
+        *([
+            f"- **Harmonic DNA:** {result.dna.signature}",
+            *(["- **Devices:** " + ", ".join(f"{k} ×{v}" for k, v in result.dna.devices.items())]
+              if result.dna.devices else []),
+        ] if result.dna else []),
+        *([
+            f"- **Trust:** overall {result.confidence.overall:.2f} "
+            f"(chord {result.confidence.chord:.2f}, bass {result.confidence.bass:.2f}, "
+            f"inversion {result.confidence.inversion:.2f}, voicing {result.confidence.voicing:.2f}, "
+            f"function {result.confidence.function:.2f}, rhythm {result.confidence.rhythm:.2f})"
+        ] if result.confidence else []),
         "",
         "| Start | End | Chord | Inversion | Function | Voicing | Effect |",
         "|---|---|---|---|---|---|---|",
@@ -271,6 +320,29 @@ header .meta { color: var(--muted); font-size: .9rem; margin-top: 6px; }
 .pchip.ext { color: #f0b060; border-color: #7a5a30; }
 .pchip.add { color: #cf8fdf; border-color: #6a4a72; }
 
+/* --- Harmonic DNA & trust card --- */
+.cardtitle { margin: 0 0 10px; font-size: 1rem; }
+.dnasig { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; color: var(--accent); }
+.devchips { margin-bottom: 12px; }
+.devchip { display: inline-block; border: 1px solid var(--line); background: var(--panel2);
+           border-radius: 6px; padding: 3px 9px; margin: 0 6px 6px 0; font-size: .78rem;
+           color: var(--muted); }
+.dnamatch { display: flex; gap: 10px; align-items: baseline; padding: 5px 0;
+            border-bottom: 1px solid var(--line); font-size: .85rem; flex-wrap: wrap; }
+.dnaseq { font-weight: 700; color: var(--text); }
+.dnaname { color: var(--accent); }
+.dnacount, .dnatime { color: var(--muted); font-variant-numeric: tabular-nums; }
+.dnanote { color: var(--muted); flex: 1 1 200px; }
+.dims { margin-top: 12px; }
+.dimrow { display: flex; align-items: center; gap: 10px; padding: 3px 0; font-size: .82rem; }
+.dimrow.overall { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 8px;
+                  font-weight: 700; }
+.dimlab { width: 130px; color: var(--muted); flex-shrink: 0; }
+.dimbar { flex: 1; height: 7px; border-radius: 4px; background: var(--panel2); overflow: hidden; }
+.dimbar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.dimval { width: 44px; text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+.dimrow.overall .dimlab, .dimrow.overall .dimval { color: var(--text); }
+
 /* --- table --- */
 table { border-collapse: collapse; margin-top: 14px; width: 100%; font-size: .85rem; }
 th, td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--line); }
@@ -375,6 +447,8 @@ body.light .chord { border-color: rgba(0,0,0,.2); }
       <span class="pcs" id="d-pcs"></span>
     </div>
   </div>
+
+  __DNA_CARD__
 
   <table id="tbl">
     <thead><tr><th>Start</th><th>End</th><th>Chord</th><th>Inversion</th><th>Function</th><th>Conf.</th></tr></thead>
@@ -786,6 +860,60 @@ def _print_document(result: AnalysisResult, sharp: bool) -> str:
     )
 
 
+def _fmt_mmss(t: float) -> str:
+    return f"{int(t) // 60}:{int(t) % 60:02d}"
+
+
+def _dna_card(result: AnalysisResult) -> str:
+    """HTML block for the Harmonic DNA + trust panel (empty string when absent)."""
+    if result.dna is None and result.confidence is None:
+        return ""
+    parts = ['<div class="card" id="dnacard"><h2 class="cardtitle">Harmonic DNA &amp; trust</h2>']
+    if result.dna:
+        parts.append(f'<div class="dnasig">{_esc_html(result.dna.signature)}</div>')
+        if result.dna.devices:
+            chips = "".join(
+                f'<span class="devchip">{_esc_html(k)} ×{v}</span>'
+                for k, v in result.dna.devices.items()
+            )
+            parts.append(f'<div class="devchips">{chips}</div>')
+        if result.dna.matches:
+            rows = []
+            for m in result.dna.matches:
+                rows.append(
+                    '<div class="dnamatch">'
+                    f'<span class="dnaseq">{_esc_html(" → ".join(m.numerals))}</span>'
+                    f'<span class="dnaname">{_esc_html(m.name)}</span>'
+                    f'<span class="dnacount">×{m.count}</span>'
+                    f'<span class="dnatime">{_fmt_mmss(m.start)}–{_fmt_mmss(m.end)}</span>'
+                    f'<span class="dnanote">{_esc_html(m.annotation)}</span>'
+                    "</div>"
+                )
+            parts.append(f'<div class="dnalist">{"".join(rows)}</div>')
+    c = result.confidence
+    if c is not None:
+        dims = [
+            ("Overall", c.overall),
+            ("Chord labels", c.chord),
+            ("Bass evidence", c.bass),
+            ("Inversions", c.inversion),
+            ("Voicing", c.voicing),
+            ("Key & function", c.function),
+            ("Beat grid", c.rhythm),
+        ]
+        rows = "".join(
+            '<div class="dimrow%s">'
+            '<span class="dimlab">%s</span>'
+            '<span class="dimbar"><i style="width:%d%%"></i></span>'
+            '<span class="dimval">%.2f</span></div>'
+            % (" overall" if i == 0 else "", label, round(v * 100), v)
+            for i, (label, v) in enumerate(dims)
+        )
+        parts.append(f'<div class="dims">{rows}</div>')
+    parts.append("</div>")
+    return "".join(parts)
+
+
 def html_report(result: AnalysisResult, sharp: bool = True,
                 audio_src: str | None = None) -> str:
     """Standalone interactive Timeline Player (audio-embedded when available).
@@ -848,6 +976,7 @@ def html_report(result: AnalysisResult, sharp: bool = True,
             f"{result.rhythm.tempo:.0f} BPM · {result.rhythm.meter}/4"
             if result.rhythm else "no beat grid"
         ),
+        "__DNA_CARD__": _dna_card(result),
     }.items():
         html = html.replace(k, v)
     return html

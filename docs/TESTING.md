@@ -22,6 +22,7 @@ Current state: **31 tests, all passing** (~20 s; librosa emits harmless
 | `test_rhythm.py` | — | meter estimation on synthetic click tracks (4/4 recovered); downbeat phase; chord↔beat alignment (`bar`, `beat_in_bar`, `beats`, `pushed`); honest `None` for pulseless input |
 | `test_server.py` | 7 | landing page 200; URL job creation + validation; upload job (multipart) incl. oversize/type rejection; poll lifecycle; player + audio routes; full upload→poll→player flow via TestClient |
 | `test_end_to_end.py` | — | synthesized multi-chord audio (numpy-generated waveform of known chords) through the whole pipeline recovers progression + key |
+| `test_trust.py` | 11 | confidence engine calibration (bass dominance → inversion score, unresolved bass neutral 0.5, bounded dimensions, weighted overall); DNA engine (axis recognition + repeat counts, 7th-quality tolerance, n-gram fallback, device tallies, empty input); end-to-end trust through the pipeline and all four report surfaces (JSON/MD/terminal/player card) |
 
 ## Conventions
 
