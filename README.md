@@ -1,5 +1,7 @@
 # harmony — chord progression, voicing & inversion analyzer
 
+[![CI](https://github.com/johni424/harmony-analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/johni424/harmony-analyzer/actions/workflows/ci.yml)
+
 Analyzes the harmony of a song from a YouTube/Spotify link or a local audio
 file and reports **exactly what is playing**:
 

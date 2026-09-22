@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install ffmpeg (audio decoding backend)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install package + test deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[web,dev]" yt-dlp jsonschema
+
+      - name: Show environment
+        run: |
+          python --version
+          pip list | grep -Ei "harmony|librosa|fastapi|jsonschema|pytest|numba|numpy"
+
+      - name: Run full test suite
+        run: pytest -q
+
+      - name: Evaluation smoke test (offline synthetic dataset)
+        run: |
+          python -m harmony.evaluation datasets/synthetic.json --case axis_c_major
+
+      - name: CLI smoke test (no network)
+        run: |
+          python - <<'EOF'
+          import numpy as np, soundfile as sf, subprocess, sys, tempfile, pathlib
+          sr = 22050
+          t = np.arange(int(sr * 2)) / sr
+          wave = sum(np.sin(2 * np.pi * f * t) * a for f, a in ((261.63, .5), (329.63, .4), (392.0, .35)))
+          wav = pathlib.Path(tempfile.mkdtemp()) / "cmaj.wav"
+          sf.write(wav, (wave * .3).astype(np.float32), sr)
+          subprocess.run([sys.executable, "-m", "harmony.cli", str(wav),
+                          "--json", str(wav.with_suffix(".json"))], check=True)
+          import json
+          doc = json.loads(wav.with_suffix(".json").read_text())
+          assert doc["chords"], "CLI produced no chords"
+          print("CLI smoke OK:", doc["chords"][0]["chord"])
+          EOF

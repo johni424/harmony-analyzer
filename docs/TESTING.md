@@ -39,9 +39,11 @@ Current state: **71 tests, all passing** (~25 s; librosa emits harmless
 - 🟡 no golden-file regression on a fixed real-mix fixture (blocked by
   licensing — a licensed/licensable fixture would unblock it; the synthetic
   dataset provides the hermetic equivalent today)
-- 🔴 no CI workflow (tests run locally today; GitHub Actions is a one-file add)
 - 🟡 server tests don't cover the yt-dlp path (network) — by design; it is
   exercised in manual/eval runs
 
 Closed 2026-09 (step 25): performance regression budget
 (`test_performance_budget_sec_per_audio_minute`, < 3× realtime).
+Closed 2026-09: CI — `.github/workflows/ci.yml` runs the full suite on every
+push/PR to `main`, plus an offline eval smoke case and a CLI smoke test
+(install-from-scratch also guards against missing dependency declarations).

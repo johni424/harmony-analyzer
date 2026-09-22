@@ -511,9 +511,10 @@ bass/inversion gates, function/roman logic, rhythm (synthetic click track +
 meter), server (upload → poll → player via TestClient), end-to-end (synthesized
 multi-chord audio through the whole pipeline), schema contract (step 20),
 trust engines (step 19), and the evaluation harness (step 25). What each
-suite guarantees: [TESTING.md](TESTING.md). Remaining gaps: 🟡 no golden-file
-test on a real-mix fixture, 🔴 no CI workflow yet (tests run locally). The
-performance-regression gap is closed (budget test, < 3× realtime).
+suite guarantees: [TESTING.md](TESTING.md). Remaining gap: 🟡 no golden-file
+test on a real-mix fixture. Closed: performance-regression budget (< 3×
+realtime) and CI — `.github/workflows/ci.yml` runs the full suite on every
+push/PR to `main` plus offline eval + CLI smoke checks.
 
 ## 26. Security 🔴 (hardening) / 🟡 (baseline)
 
