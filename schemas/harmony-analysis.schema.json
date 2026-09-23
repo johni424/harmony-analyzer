@@ -129,7 +129,11 @@
         "confidence": {"$ref": "#/$defs/unitInterval"},
         "voicing": {"$ref": "#/$defs/voicing"},
         "rhythm": {"$ref": "#/$defs/chordRhythm"},
-        "effect": {"type": "string"}
+        "effect": {"type": "string"},
+        "human_corrected": {
+          "type": "boolean",
+          "description": "v1.1: label changed by a human via the correction interface (provenance for training data)"
+        }
       },
       "allOf": [
         {
@@ -165,8 +169,8 @@
         "pitch_classes": {"type": "array", "items": {"$ref": "#/$defs/pitchName"}},
         "extensions": {
           "type": "array",
-          "description": "semitone intervals above root (b7=10, 9=2, 11=5, 13=9)",
-          "items": {"enum": [10, 2, 5, 9]}
+          "description": "semitone intervals above root (v1.1: full candidate set — b9=1, 9=2, #9=3, 11=5, #11=6, b13=8, 13=9, b7=10, maj7=11)",
+          "items": {"enum": [1, 2, 3, 5, 6, 8, 9, 10, 11]}
         },
         "spacing": {"enum": ["single note", "cluster", "closed", "open", "spread", "unknown"]},
         "added_notes": {"type": "array", "items": {"$ref": "#/$defs/pitchName"}},

@@ -81,7 +81,7 @@ def _minimal_doc(**overrides) -> dict:
 
 def test_schema_file_is_valid_draft_2020_12() -> None:
     assert schema.load_schema()["$schema"].endswith("2020-12/schema")
-    assert schema.SCHEMA_VERSION_STRING == "1.0.0"  # frozen at v1.0.0
+    assert schema.SCHEMA_VERSION_STRING == "1.1.0"  # additive bump: corrections + full extension enum
 
 
 def test_minimal_document_is_accepted() -> None:
@@ -227,7 +227,7 @@ def test_api_v1_analysis_full_flow_contract(tmp_path) -> None:
     res = client.get(f"/api/v1/jobs/{job_id}/analysis")
     assert res.status_code == 200
     body = res.json()
-    assert body["schema_version"] == "1.0.0"
+    assert body["schema_version"] == "1.1.0"
     errors = schema.validate_payload(body["analysis"])
     assert errors == [], f"API document violates the contract: {errors}"
 

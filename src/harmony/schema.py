@@ -17,7 +17,10 @@ import jsonschema
 
 # Canonical analysis schema version. Bump on any change to the frozen file:
 # additive changes → minor, breaking changes → major (docs/JSON_SCHEMA.md).
-SCHEMA_VERSION = (1, 0, 0)
+# 1.1.0 (2026-09-22): optional chord.human_corrected (correction provenance);
+# voicing.extensions enum widened to the full emitted interval set {1,2,3,5,
+# 6,8,9,10,11} — the v1.0 enum was narrower than what voicing.py can emit.
+SCHEMA_VERSION = (1, 1, 0)
 SCHEMA_VERSION_STRING = ".".join(str(p) for p in SCHEMA_VERSION)
 
 #: Layout when running from a source checkout (repo root two levels up from src/harmony).

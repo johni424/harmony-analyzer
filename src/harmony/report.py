@@ -99,6 +99,8 @@ def json_report(result: AnalysisResult) -> str:
             }
         if c.effect:
             d["effect"] = c.effect
+        if getattr(c, "human_corrected", False):
+            d["human_corrected"] = True
         return d
 
     payload = {
@@ -446,6 +448,10 @@ body.light .chord { border-color: rgba(0,0,0,.2); }
       <span class="piano" id="d-piano"></span>
       <span class="pcs" id="d-pcs"></span>
     </div>
+    <div id="editrow" style="display:none;margin-top:10px">
+      <button id="edit-btn" title="You know this chord better than the machine — fix it">✎ Edit chord</button>
+      <span id="edit-status" style="margin-left:8px;font-size:12px"></span>
+    </div>
   </div>
 
   __DNA_CARD__
@@ -466,6 +472,8 @@ __PRINTDOC__
 
 <script>
 const CHORDS = __CHORDS_JSON__;
+const EDIT_ENDPOINT = __EDIT_ENDPOINT__;   // null in standalone exports → no edit UI
+let detailIdx = 0;
 const KEY = __KEY_JSON__;
 const TITLE = __TITLE_JSON__;
 const DURATION = __DURATION__;
@@ -666,6 +674,7 @@ function selectChord(i) {
 }
 function showDetail(i) {
   const c = CHORDS[i];
+  detailIdx = i;
   $('d-sym').textContent = c.symbol;
   $('d-roman').textContent = c.roman ? `(${c.roman} · ${c.role})` : '';
   $('d-inv').textContent = c.inv ? c.inv + ' inversion — bass ' + c.bass : '';
@@ -682,7 +691,50 @@ function showDetail(i) {
     return `<span class="pchip ${cls}">${p}${tag}</span>`;
   }).join('');
   $('d-pcs').innerHTML = chips || '<span class="pchip">no pitches detected</span>';
+  // Correction interface (roadmap step 3): active only when served by the web
+  // app (EDIT_ENDPOINT set). A ✎ marks labels a human has fixed.
+  const editRow = $('editrow');
+  if (!EDIT_ENDPOINT) { editRow.style.display = 'none'; return; }
+  editRow.style.display = '';
+  $('edit-status').textContent = c.corrected ? 'corrected by you ✓' : '';
 }
+
+function applyCorrection(i, newSymbol) {
+  fetch(EDIT_ENDPOINT + '/correct', {
+    method: 'PATCH',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({index: i, new_symbol: newSymbol}),
+  }).then(r => r.json().then(b => ({ok: r.ok, status: r.status, body: b})))
+    .then(({ok, body}) => {
+      if (!ok) {
+        $('edit-status').textContent = '✗ ' + (body.detail || 'rejected');
+        return;
+      }
+      const updated = body.chord, c = CHORDS[i];
+      c.symbol = updated.chord; c.root = updated.root; c.bass = updated.bass;
+      c.inv = updated.inversion; c.corrected = true;
+      const el = document.querySelector(`.chord[data-i="${i}"] .sym`);
+      if (el) el.textContent = updated.chord;
+      const row = document.querySelector(`tr.trow[data-i="${i}"]`);
+      if (row) row.cells[2].textContent = updated.chord;
+      $('d-sym').textContent = updated.chord;
+      $('edit-status').textContent = 'corrected ✓ — feeds the evaluation dataset';
+    })
+    .catch(e => { $('edit-status').textContent = '✗ network error'; });
+}
+
+(function setupEdit() {
+  const btn = document.getElementById('edit-btn');
+  if (!btn) return;
+  btn.onclick = () => {
+    if (!EDIT_ENDPOINT || typeof detailIdx !== 'number') return;
+    const c = CHORDS[detailIdx];
+    const v = window.prompt('Correct chord (Root[Quality][/Bass], e.g. Fmaj7/A):', c.symbol);
+    if (!v || v === c.symbol) return;
+    $('edit-status').textContent = '…';
+    applyCorrection(detailIdx, v.trim());
+  };
+})();
 function isChordTone(c, p) {
   return c.pcs.indexOf(p) >= 0 && !c.adds.includes(p);
 }
@@ -915,11 +967,16 @@ def _dna_card(result: AnalysisResult) -> str:
 
 
 def html_report(result: AnalysisResult, sharp: bool = True,
-                audio_src: str | None = None) -> str:
+                audio_src: str | None = None,
+                edit_endpoint: str | None = None) -> str:
     """Standalone interactive Timeline Player (audio-embedded when available).
 
     audio_src: optional URL for the audio (e.g. "/audio/<job>"). When given it
     replaces the base64 data URI, so web players stream instead of embedding.
+    edit_endpoint: optional API base (e.g. "/api/v1/jobs/<id>"). When given the
+    detail panel grows an Edit affordance (correction interface, roadmap
+    step 3): the user fixes a label, the server validates it against the
+    frozen schema, and the correction feeds the evaluation dataset.
     """
     chords_data = []
     for c in result.chords:
@@ -944,6 +1001,7 @@ def html_report(result: AnalysisResult, sharp: bool = True,
             "exts": [pitch_name(c.root_pc + i, sharp) for i in (vc.extensions if vc else ())],
             "adds": sorted(pitch_name(p, sharp) for p in vc.added_notes) if vc else [],
             "fncls": _color_classes(c.role, c.effect),
+            "corrected": bool(getattr(c, "human_corrected", False)),
         })
 
     audio_uri = audio_src
@@ -977,6 +1035,7 @@ def html_report(result: AnalysisResult, sharp: bool = True,
             if result.rhythm else "no beat grid"
         ),
         "__DNA_CARD__": _dna_card(result),
+        "__EDIT_ENDPOINT__": json.dumps(edit_endpoint),
     }.items():
         html = html.replace(k, v)
     return html

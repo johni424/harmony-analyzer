@@ -16,6 +16,7 @@ key, and confidence calibration (per-bucket empirical correctness + Brier).
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 import time
@@ -24,7 +25,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .models import AnalysisResult, pc_from_name
+from .models import AnalysisResult, Chord, pc_from_name
 from .pipeline import analyze
 
 SR = 22050
@@ -42,6 +43,8 @@ class RefChord:
     start: float  # seconds (already resolved from beats if needed)
     duration: float
     bass: str | None = None  # explicit reference bass note name ("B" in G/B)
+    roman: str | None = None  # optional reference roman numeral ("IVmaj7")
+    n_corrections: int = 0  # times a human corrected this label (correction interface)
 
 
 @dataclass
@@ -89,6 +92,26 @@ class CaseScore:
     brier: float | None  # mean (confidence − correct)² over ref-covered time
     analysis_seconds: float
     audio_seconds: float
+    roman_accuracy: float | None  # where reference states a roman numeral
+    timing_median_ms: float | None  # median onset alignment (|detected − reference|)
+    situations: dict[str, float] = field(default_factory=dict)
+    # "by musical situation" accuracies (doc step 2): triads / sevenths /
+    # slash / fast changes + genre tags from the manifest
+
+
+def _roman_matches(ref_roman: str, det_function: str | None, key: str) -> bool:
+    """Tolerant roman-numeral comparison: case-insensitive on the numeral,
+    ignores 7/9 quality suffixes (IVmaj7 ≈ IV7 ≈ IV — the quality is scored
+    separately), but the accidental and degree must match. Uses the decoded
+    `function` field verbatim (secondary-dominant labels compare literally)."""
+    if det_function is None:
+        return False
+
+    def core(r: str) -> str:
+        m = re.match(r"^([#b]?)([IViv]+)", r)
+        return (m.group(1) + m.group(2).upper()) if m else r
+
+    return core(ref_roman) == core(det_function)
 
 
 # --------------------------------------------------------------------------- #
@@ -220,6 +243,20 @@ def _detected_timeline(result: AnalysisResult) -> list[tuple[float, float, int, 
     return [(c.start, c.end, c.root_pc, c.quality, c.bass_pc) for c in result.chords]
 
 
+def _dominant_segment(ref: RefChord, chords) -> Chord | None:
+    """The detected segment with the largest temporal overlap with a reference
+    span — what the analyzer 'said' at that ground-truth chord. Onset
+    containment is wrong here: a boundary snapped 20 ms late makes the
+    previous segment contain the reference onset."""
+    r0, r1 = ref.start, ref.start + ref.duration
+    best, best_ov = None, 0.0
+    for c in chords:
+        ov = min(r1, c.end) - max(r0, c.start)
+        if ov > best_ov:
+            best, best_ov = c, ov
+    return best
+
+
 def _coverage(ref: RefChord, timeline, match) -> float:
     """Fraction of the reference span covered by detected segments passing `match`."""
     r0, r1 = ref.start, ref.start + ref.duration
@@ -305,6 +342,26 @@ def score_case(case: RefCase, result: AnalysisResult, analysis_seconds: float) -
     brier = (sum(wt * e for wt, e in brier_terms) / sum(wt for wt, _ in brier_terms)
              if brier_terms else None)
 
+    # Roman-numeral accuracy: only where the reference states a roman.
+    roman_idx = [i for i, rc in enumerate(case.chords) if rc.roman]
+    roman_acc = None
+    if roman_idx:
+        rw = np.array([case.chords[i].duration for i in roman_idx])
+        roman_acc = float(np.average([
+            float((dom := _dominant_segment(case.chords[i], result.chords)) is not None
+                  and dom.root_pc == ref_root[i]
+                  and _roman_matches(case.chords[i].roman, dom.function, case.key))
+            for i in roman_idx], weights=rw))
+
+    # Timing accuracy: median |ref onset − nearest detected onset| in ms.
+    timing_median = None
+    if ref_bounds and det_bounds:
+        timing_median = float(np.median([min(abs(rb - db) for db in det_bounds)
+                                         for rb in ref_bounds]) * 1000)
+
+    # "By musical situation" (doc step 2): strict chord accuracy per class.
+    situations = _situation_scores(case, timeline, ref_root, ref_quality, ref_bass)
+
     return CaseScore(
         case_id=case.id, genre=case.genre, n_ref=len(case.chords),
         n_detected=len(result.chords), chord_accuracy=chord_acc,
@@ -312,8 +369,44 @@ def score_case(case: RefCase, result: AnalysisResult, analysis_seconds: float) -
         boundary_median=b_med, boundary_within_250ms=b_within,
         tempo_ok=tempo_ok, tempo_ratio=tempo_ratio, meter_ok=meter_ok,
         key_ok=key_ok, brier=brier, analysis_seconds=analysis_seconds,
-        audio_seconds=case.duration,
+        audio_seconds=case.duration, roman_accuracy=roman_acc,
+        timing_median_ms=timing_median, situations=situations,
     )
+
+
+def _situation_scores(case: RefCase, timeline, ref_root, ref_quality,
+                      ref_bass) -> dict[str, float]:
+    """Strict chord accuracy per musical situation (doc step 2).
+
+    Per-chord classes: triads / sevenths / slash; case-level: fast changes
+    (median reference duration < 2 s) and the case's genre tag."""
+    triad_q = {"maj", "min", "dim", "aug", "sus4", "sus2"}
+    classes: dict[str, list[int]] = {"triads": [], "sevenths": [], "slash": []}
+    for i, c in enumerate(case.chords):
+        if ref_quality[i] in triad_q:
+            classes["triads"].append(i)
+        else:
+            classes["sevenths"].append(i)
+        if ref_bass[i] is not None:
+            classes["slash"].append(i)
+    durs = sorted(c.duration for c in case.chords)
+    fast = durs[len(durs) // 2] < 2.0 if durs else False
+
+    out: dict[str, float] = {}
+    for name, idx in classes.items():
+        if not idx:
+            continue
+        w = np.array([case.chords[i].duration for i in idx])
+        out[name] = float(np.average([
+            _coverage(case.chords[i], timeline,
+                      lambda r, q, b, R=ref_root[i], Q=ref_quality[i]: r == R and q == Q)
+            for i in idx], weights=w))
+    if fast and case.chords:
+        w = np.array([c.duration for c in case.chords])
+        out["fast changes"] = float(np.average([
+            _coverage(c, timeline, lambda r, q, b, R=rt, Q=qt: r == R and q == Q)
+            for c, rt, qt in zip(case.chords, ref_root, ref_quality)], weights=w))
+    return out
 
 
 # --------------------------------------------------------------------------- #
@@ -321,8 +414,9 @@ def score_case(case: RefCase, result: AnalysisResult, analysis_seconds: float) -
 # --------------------------------------------------------------------------- #
 
 
-def run_case(case: RefCase, work_dir: Path | None = None) -> CaseScore:
-    """Analyze one case and score it."""
+def run_case_full(case: RefCase, work_dir: Path | None = None) -> tuple[CaseScore, AnalysisResult]:
+    """Analyze one case; return (score, result) so callers can build the
+    per-song comparison table (doc step 1)."""
     if case.kind == "synthetic":
         audio = render_case(case)
         tmp = Path(tempfile.mkdtemp(prefix="harmony_eval_")) if work_dir is None else work_dir
@@ -332,7 +426,7 @@ def run_case(case: RefCase, work_dir: Path | None = None) -> CaseScore:
             sf.write(wav, audio, SR)
             t0 = time.time()
             result = analyze(str(wav), verbose=False)
-            return score_case(case, result, time.time() - t0)
+            return score_case(case, result, time.time() - t0), result
         finally:
             if work_dir is None:
                 wav.unlink(missing_ok=True)
@@ -341,8 +435,13 @@ def run_case(case: RefCase, work_dir: Path | None = None) -> CaseScore:
             raise ValueError(f"real case {case.id!r} has no source URL")
         t0 = time.time()
         result = analyze(case.source, verbose=False)
-        return score_case(case, result, time.time() - t0)
+        return score_case(case, result, time.time() - t0), result
     raise ValueError(f"unknown case kind {case.kind!r}")
+
+
+def run_case(case: RefCase, work_dir: Path | None = None) -> CaseScore:
+    """Analyze one case and score it."""
+    return run_case_full(case, work_dir)[0]
 
 
 def load_dataset(path: Path) -> list[RefCase]:
@@ -377,15 +476,27 @@ def aggregate(scores: list[CaseScore]) -> dict:
             "key_ok": sum(1 for s in rows if s.key_ok) / n if n else None,
             "brier": (lambda v: round(float(np.mean(v)), 4) if v else None)(
                 [s.brier for s in rows if s.brier is not None]),
+            "roman_accuracy": (lambda v: round(float(np.mean(v)), 4) if v else None)(
+                [s.roman_accuracy for s in rows if s.roman_accuracy is not None]),
+            "timing_median_ms": (lambda v: round(float(np.mean(v)), 1) if v else None)(
+                [s.timing_median_ms for s in rows if s.timing_median_ms is not None]),
+            "situations": {},
             "sec_per_audio_min": round(float(np.mean(
                 [s.analysis_seconds / s.audio_seconds * 60 for s in rows
                  if s.audio_seconds > 0])), 2) if n else None,
         }
 
     genres = sorted({s.genre for s in scores})
+    # "by musical situation" (doc step 2): pooled situation accuracies.
+    situations: dict[str, list[float]] = {}
+    for s in scores:
+        for k, v in (s.situations or {}).items():
+            situations.setdefault(k, []).append(v)
     return {
         "overall": bucket(scores),
         "by_genre": {g: bucket([s for s in scores if s.genre == g]) for g in genres},
+        "by_situation": {k: round(float(np.mean(v)), 4)
+                         for k, v in sorted(situations.items())},
     }
 
 
@@ -411,6 +522,49 @@ def report_markdown(scores: list[CaseScore], agg: dict, dataset: str) -> str:
         lines.append(
             f"| {g} | {b['n']} | {b['chord_accuracy']} | {b['family_accuracy']} | {b['root_accuracy']} "
             f"| {b['bass_accuracy'] or '—'} | {b['brier'] or '—'} |")
+    if agg.get("by_situation"):
+        lines += ["", "## By musical situation", "", "| situation | chord accuracy |", "|---|---|"]
+        for k, v in agg["by_situation"].items():
+            lines.append(f"| {k} | {v} |")
+    return "\n".join(lines) + "\n"
+
+
+def comparison_table(case: RefCase, result: AnalysisResult) -> str:
+    """The doc (step 1) per-song comparison: analyzer vs ground truth per chord,
+    with per-field verdicts (✓ match, ✗ mismatch, ~ close timing)."""
+    det = result.chords
+    lines = [
+        f"# Validation — {case.id} ({case.genre})",
+        "",
+        f"Key: analyzer **{result.key.name()}** vs ground truth **{case.key}**"
+        f" — {'✓' if result.key.name().lower() == case.key.lower() or
+              any(result.key.name().lower() == a.lower() for a in case.key_alt) else '✗'}",
+        f"Tempo: analyzer **{result.tempo and round(result.tempo, 1)}** vs **{case.tempo}** · "
+        f"Meter: **{result.rhythm.meter if result.rhythm else '?'}** vs **{case.meter}**",
+        "",
+        "| # | ground truth | analyzer | chord | bass | inv | roman | timing |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    ref_root, ref_quality, ref_bass = zip(*(parse_symbol(c.symbol) for c in case.chords))
+    for i, rc in enumerate(case.chords):
+        d = _dominant_segment(rc, det)
+        covered = d is not None
+        ok = (covered and d.root_pc == ref_root[i] and d.quality == ref_quality[i])
+        mark = "✓" if ok else "✗"
+        bass_mark = "—"
+        if ref_bass[i] is not None:
+            bass_mark = "✓" if (covered and d.bass_pc == ref_bass[i]) else "✗"
+        roman_mark = "—"
+        if rc.roman:
+            roman_mark = "✓" if (covered and d is not None and
+                                 _roman_matches(rc.roman, d.function, case.key)) else "✗"
+        timing = min((abs(b - rc.start) for b in [c.start for c in det]), default=0)
+        t_mark = "~" if timing <= 0.25 else ("✓" if timing < 0.1 else "✗")
+        sym = rc.symbol + ("/" + rc.bass if rc.bass else "")
+        sym += f" ({rc.roman})" if rc.roman else ""
+        lines.append(
+            f"| {i + 1} | {sym} | {d.symbol() if covered else '—'} "
+            f"| {mark} | {bass_mark} | {roman_mark} | {timing * 1000:.0f} ms {t_mark} |")
     return "\n".join(lines) + "\n"
 
 
@@ -423,6 +577,9 @@ def main() -> None:
     parser.add_argument("--case", default=None, help="Run a single case id")
     parser.add_argument("--fetch", action="store_true",
                         help="Allow real-song cases (yt-dlp fetch); default: synthetic only")
+    parser.add_argument("--report-song", metavar="ID", default=None,
+                        help="Also write <out-prefix>.<ID>.md — the doc-step-1 "
+                             "analyzer-vs-ground-truth comparison table for one case")
     args = parser.parse_args()
 
     cases = load_dataset(Path(args.dataset))
@@ -438,10 +595,14 @@ def main() -> None:
         raise SystemExit(1)
 
     scores = []
+    song_report = None
     for case in cases:
         print(f"[{case.kind}] {case.id} …", flush=True)
         try:
-            scores.append(run_case(case))
+            score, result = run_case_full(case)
+            scores.append(score)
+            if args.report_song == case.id:
+                song_report = comparison_table(case, result)
         except Exception as exc:
             print(f"  FAILED: {type(exc).__name__}: {exc}", file=sys.stderr)
 
@@ -456,6 +617,10 @@ def main() -> None:
              "cases": [s.__dict__ | {} for s in scores]}, indent=2, default=str))
         out.with_suffix(".md").write_text(report_markdown(scores, agg, dataset_name))
         print(f"wrote {out.with_suffix('.json')} and {out.with_suffix('.md')}")
+    if song_report and args.out:
+        song_path = Path(args.out).with_suffix(f".{args.report_song}.md")
+        song_path.write_text(song_report)
+        print(f"wrote {song_path}")
 
 
 if __name__ == "__main__":

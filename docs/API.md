@@ -95,7 +95,7 @@ The full canonical analysis document (schema version + payload):
 
 ```json
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "analysis": { "title": "…", "key": {…}, "chords": […], "confidence": {…}, "dna": {…} }
 }
 ```
@@ -104,6 +104,27 @@ Served from the persisted `analysis.json` artifact (re-derived from the live
 result if the artifact is missing/corrupt). **The endpoint never serves a
 document that fails the frozen contract** — a validation failure yields HTTP
 500 with `schema_version` + up to 20 violation strings.
+
+### `PATCH /api/v1/jobs/{job_id}/correct` — correction interface (roadmap step 3)
+The musician fixes a label the analyzer got wrong:
+
+```json
+{"index": 12, "new_symbol": "Fmaj7/A", "note": "bass is clearly A here"}
+```
+
+The symbol is strictly parsed (real note names, known quality suffixes), the
+inversion is derived, non-chord-tone basses are normalized (kept as intent,
+no phantom inversion), and the whole document is **re-validated against the
+frozen schema** — a correction may change labels, never the contract. The
+corrected document is persisted (`human_corrected: true` provenance) and the
+response carries the updated chord plus a `dataset_case` — the correction as
+a ground-truth case in `harmony-eval` format, so user corrections feed the
+evaluation dataset directly. `422` on bad input, `404` unknown job, `409`
+not ready.
+
+### `GET /api/v1/jobs/{job_id}/corrections`
+The correction log (original → new, timestamps, notes) with the derived
+dataset case.
 
 ## Error model
 

@@ -9,7 +9,7 @@ Run everything:
 cd song-harmony-analyzer && .venv/bin/python -m pytest tests/ -q
 ```
 
-Current state: **71 tests, all passing** (~25 s; librosa emits harmless
+Current state: **90 tests, all passing** (~30 s; librosa emits harmless
 `n_fft` warnings on synthetic short fixtures).
 
 ## Suites and what each guarantees
@@ -25,6 +25,8 @@ Current state: **71 tests, all passing** (~25 s; librosa emits harmless
 | `test_trust.py` | 11 | confidence engine calibration (bass dominance → inversion score, unresolved bass neutral 0.5, bounded dimensions, weighted overall); DNA engine (axis recognition + repeat counts, 7th-quality tolerance, n-gram fallback, device tallies, empty input); end-to-end trust through the pipeline and all four report surfaces (JSON/MD/terminal/player card) |
 | `test_schema.py` | 13 | step-20 contract: frozen schema is metaschema-valid at v1.0.0; synthetic-doc rejections (unknown keys, missing required fields, out-of-range confidence, unknown quality, inversion-name/bass mismatches); pipeline output validates on synthesized audio; `/api/v1/schema` serves the frozen file; analysis endpoint 404/409 + full upload→poll→contract-valid-document flow |
 | `test_evaluation.py` | 16 | step-25 harness: reference parsing (slash/flat/7th symbols, quality families), renderer honors declared bass (FFT check), metrics math (perfect match = 1.0, extension tolerance, bass scored only where referenced, tempo octave-folding, Brier), manifest integrity (tiling, chord-tone bass, provenance on real entries), performance budget (analysis < 3× realtime, `slow`-marked) |
+| `test_benchmark.py` | 8 | step-28 harness: cost-model math (hand-computed serverless, linear retention/egress, custom pricing overrides), aggregation normalization (per-audio-minute, max RSS), live subprocess measurement (import baseline; full analyze row with all artifacts, `slow`-marked) |
+| `test_corrections.py` | 11 | roadmap steps 1–3: per-song comparison table (✓ rows on a perfect case, ✗ on a wrong label), by-situation split (triads/sevenths/slash) + roman/timing metrics, strict symbol parser, correction application (inversion derivation, provenance, non-chord-bass normalization), dataset-case round-trip through the harness, HTTP PATCH flow incl. corrected `/analysis` serving and 422 on garbage symbols |
 
 ## Conventions
 

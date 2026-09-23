@@ -15,6 +15,8 @@ pulled early because it unblocks everything that needs evidence.
 - CLI (JSON/MD/HTML) + web app (landing → progress → player)
 - Timeline Player: waveform sync, click-to-seek, function-colored grid, bar
   lines, beat pulse, transport, themes, PDF export, streamed web audio
+- CI on every push; evaluation harness + datasets; measured cost model and
+  the LOCAL-first architecture decision ([ADR-008](ADR/ADR-008-local-vs-cloud.md))
 
 ## Next (v1.1 — product completion)
 
@@ -41,8 +43,10 @@ pulled early because it unblocks everything that needs evidence.
 
 ## Later (v2.0 — production)
 
-10. Persistent multi-user storage (Postgres), auth, rate limits, API
-    versioning (`/v1/`).
+10. Persistent multi-user storage (Postgres), auth, rate limits. Gated on
+    product demand per [ADR-008](ADR/ADR-008-local-vs-cloud.md): measured
+    costs say LOCAL first (≤$0.0045/analysis even hosted; a $4.5 VPS covers
+    ~42k analyses/month).
 11. Hosted service: accounts, billing, sharing links.
 12. B2B API (catalog analysis) — gated on licensing posture
     ([LICENSING.md](LICENSING.md) §5–6) and on evidence from the evaluation

@@ -28,6 +28,7 @@ dev = ["pytest>=8"]
 harmony = "harmony.cli:main"
 harmony-web = "harmony.server:main"
 harmony-eval = "harmony.evaluation:main"
+harmony-bench = "harmony.benchmark:main"
 
 [build-system]
 requires = ["hatchling"]

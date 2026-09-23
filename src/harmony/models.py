@@ -87,6 +87,7 @@ class Chord:
     bar: Optional[int] = None  # 1-based bar number of the chord's first beat
     beat_in_bar: Optional[int] = None  # 1-based position of that beat within its bar
     pushed: bool = False  # chord starts off the beat (anticipation / push)
+    human_corrected: bool = False  # label changed by a human (correction interface, roadmap step 3)
 
     @property
     def duration(self) -> float:

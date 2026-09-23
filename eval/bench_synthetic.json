@@ -1,0 +1,138 @@
+{
+  "platform": {
+    "python": "3.12.13",
+    "machine": "x86_64",
+    "system": "Darwin",
+    "cpus": 4
+  },
+  "rows": [
+    {
+      "case": "import_baseline",
+      "ok": true,
+      "wall_s": 0.27,
+      "cpu_s": 0.35,
+      "peak_rss_mb": 25.0,
+      "note": "interpreter + librosa/numba import floor"
+    },
+    {
+      "case": "axis_c_major",
+      "ok": true,
+      "wall_s": 8.08,
+      "cpu_s": 7.53,
+      "peak_rss_mb": 221.7,
+      "audio_seconds": 10.6,
+      "n_chords": 5,
+      "title": "axis_c_major",
+      "artifacts": {
+        "audio_wav": 467504,
+        "player_html": 38076,
+        "analysis_json": 4560
+      },
+      "rt_factor": 0.762
+    },
+    {
+      "case": "doo_wop_c_major",
+      "ok": true,
+      "wall_s": 6.97,
+      "cpu_s": 6.92,
+      "peak_rss_mb": 225.9,
+      "audio_seconds": 11.7,
+      "n_chords": 5,
+      "title": "doo_wop_c_major",
+      "artifacts": {
+        "audio_wav": 514558,
+        "player_html": 38392,
+        "analysis_json": 4628
+      },
+      "rt_factor": 0.598
+    },
+    {
+      "case": "inversions_c_major",
+      "ok": true,
+      "wall_s": 7.28,
+      "cpu_s": 7.13,
+      "peak_rss_mb": 229.6,
+      "audio_seconds": 13.0,
+      "n_chords": 5,
+      "title": "inversions_c_major",
+      "artifacts": {
+        "audio_wav": 573344,
+        "player_html": 38378,
+        "analysis_json": 4507
+      },
+      "rt_factor": 0.56
+    },
+    {
+      "case": "sevenths_c_major",
+      "ok": true,
+      "wall_s": 6.7,
+      "cpu_s": 6.59,
+      "peak_rss_mb": 229.6,
+      "audio_seconds": 9.0,
+      "n_chords": 5,
+      "title": "sevenths_c_major",
+      "artifacts": {
+        "audio_wav": 396944,
+        "player_html": 36360,
+        "analysis_json": 3379
+      },
+      "rt_factor": 0.744
+    },
+    {
+      "case": "minor_loop_e",
+      "ok": true,
+      "wall_s": 7.4,
+      "cpu_s": 7.19,
+      "peak_rss_mb": 229.6,
+      "audio_seconds": 9.7,
+      "n_chords": 5,
+      "title": "minor_loop_e",
+      "artifacts": {
+        "audio_wav": 429004,
+        "player_html": 38121,
+        "analysis_json": 4544
+      },
+      "rt_factor": 0.761
+    },
+    {
+      "case": "waltz_f_major",
+      "ok": true,
+      "wall_s": 6.68,
+      "cpu_s": 6.23,
+      "peak_rss_mb": 229.6,
+      "audio_seconds": 4.9,
+      "n_chords": 4,
+      "title": "waltz_f_major",
+      "artifacts": {
+        "audio_wav": 214236,
+        "player_html": 36096,
+        "analysis_json": 3480
+      },
+      "rt_factor": 1.375
+    }
+  ],
+  "aggregate_per_audio_minute": {
+    "n": 6,
+    "wall_s_per_audio_min": 47.9,
+    "cpu_s_per_audio_min": 46.0,
+    "peak_rss_mb": 229.6,
+    "audio_wav_mb_per_audio_min": 2.6,
+    "player_html_kb_per_audio_min": 251.6,
+    "analysis_json_kb_per_audio_min": 27.3
+  },
+  "example_profile_65min_song": {
+    "cpu_minutes": 0.08,
+    "audio_wav_mb": 16.9,
+    "peak_rss_mb": 229.6,
+    "cost": {
+      "serverless_usd": 9e-05,
+      "vps_usd": 0.0045,
+      "retention_usd_per_month": 0.00038,
+      "ingress_egress_usd": 0.0,
+      "notes": {
+        "vps": "one $4.5 VPS sustains ~520133 analyses/month at 50% utilization (2 cores)",
+        "serverless": "0.22 GB \u00d7 5 s memory + 5 s CPU"
+      }
+    }
+  }
+}

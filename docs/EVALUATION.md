@@ -110,6 +110,53 @@ references only where verified against the player.
 .venv/bin/harmony <url-or-file> --json out.json --md out.md --html out.html
 ```
 
+## The doc-format accuracy report (steps 1–2 of the production roadmap) ✅
+
+`harmony-eval --out eval/accuracy --report-song <id>` emits exactly the
+report the production roadmap calls for — percentages, not adjectives, plus
+accuracy **by musical situation**:
+
+| metric (synthetic baseline) | value |
+|---|---|
+| chord accuracy (strict) | 82.3 % |
+| root accuracy | 98.6 % |
+| bass/inversion accuracy | **99.5 %** |
+| triads | 98.8 % |
+| slash chords | **99.5 %** |
+| fast changes | 97.0 % |
+| sevenths (synthesized) | 0 % — measured limitation, see findings |
+| key | 100 % |
+| tempo (±4 %, octave-folded) | 5/6 |
+| timing (median onset error) | ~22 ms |
+
+`--report-song <id>` additionally writes the **per-song comparison table**
+(analyzer vs ground truth, per-field ✓/✗/~ verdicts, timing in ms):
+
+```markdown
+| # | ground truth | analyzer | chord | bass | inv | roman | timing |
+| 1 | C            | C        | ✓     | —    | —   | 0 ms ~ |
+```
+
+This is the artifact to hand a musician: they can verify every row by ear.
+
+## The correction interface (step 3) ✅
+
+When a musician knows better — the analyzer says `F`, the ear says `F/A` —
+the Timeline Player (web-served jobs) shows **✎ Edit chord**. The correction:
+
+1. is validated by a strict symbol parser (real note names, known quality
+   suffixes — garbage like `Fquarter` is rejected with an explanation),
+2. is applied to the canonical document **and re-validated against the
+   frozen schema** (a correction may change labels, never the contract),
+3. records provenance (`human_corrected: true`, original symbol kept),
+4. feeds `to_dataset_case()`, which emits a ground-truth case in the exact
+   format `harmony-eval` consumes — **user corrections become the evaluation
+   dataset**, closing the loop: correction → ground truth → future accuracy.
+
+Endpoints: `PATCH /api/v1/jobs/{id}/correct`, `GET /api/v1/jobs/{id}/corrections`.
+Schema note: v1.1.0 (additive) — optional `chord.human_corrected` and the full
+extension-interval enum.
+
 Then check: (1) the progression against your ear on the strongest sections,
 (2) inversions only where the bass is actually audible, (3) whether low-
 confidence segments (conf < 0.1) coincide with genuinely ambiguous moments —

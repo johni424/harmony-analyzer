@@ -156,15 +156,20 @@ grounded in the actual implementation with a code-to-spec gap analysis
 | [TESTING.md](docs/TESTING.md) | what each test suite guarantees, known gaps |
 | [LICENSING.md](docs/LICENSING.md) | copyright position, third-party licenses, audio-handling rules |
 | [ROADMAP.md](docs/ROADMAP.md) | v1.1 → v2.0 sequenced plan |
+| [CODE_AUDIT.md](docs/CODE_AUDIT.md) | Phase 0 file-by-file audit: color-coded findings + ordered backlog |
 | [docs/ADR/](docs/ADR/) | architecture decision records (chroma, bass separation, Viterbi, event model, no source separation, streamed player) |
 
 ## Tests
 
 ```bash
-.venv/bin/python -m pytest -q          # 71 tests: units + contract + server + eval harness + end-to-end
+.venv/bin/python -m pytest -q          # 90 tests: units + contract + server + corrections + end-to-end
 
 # evaluate accuracy against the ground-truth dataset (offline, no network)
-.venv/bin/harmony-eval datasets/synthetic.json --out eval/synthetic
+# --report-song adds the analyzer-vs-ground-truth comparison table for one case
+.venv/bin/harmony-eval datasets/synthetic.json --out eval/accuracy --report-song axis_c_major
+
+# measure CPU / RAM / artifacts per analysis (cost model)
+.venv/bin/harmony-bench --synthetic axis_c_major
 ```
 
 The end-to-end test renders a I–V7–vi–IV progression (including a first-

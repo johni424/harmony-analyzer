@@ -25,6 +25,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 
 from . import report
 from . import schema as schema_mod
+from .corrections import ChordCorrection, apply_correction, to_dataset_case
 from .models import AnalysisResult
 from .pipeline import analyze
 
@@ -54,6 +55,7 @@ class Job:
     result: AnalysisResult | None = None
     audio_path: str | None = None
     work_dir: Path | None = None
+    corrections: list = field(default_factory=list)  # ChordCorrection list (ADR-007: in memory)
 
 
 JOBS: dict[str, Job] = {}
@@ -84,7 +86,8 @@ def _run_job(job: Job, source: str) -> None:
         result = analyze(source, verbose=False, keep_audio=True, on_stage=on_stage)
         job.stage = "render"
         html = report.html_report(result, sharp=False,
-                                   audio_src=f"/audio/{job.id}")
+                                   audio_src=f"/audio/{job.id}",
+                                   edit_endpoint=f"/api/v1/jobs/{job.id}")
         assert job.work_dir is not None
         (job.work_dir / "player.html").write_text(html)
         # Canonical analysis document (step 20): one JSON write, schema-versioned.
@@ -581,6 +584,91 @@ def get_analysis(job_id: str) -> JSONResponse:
         "schema_version": schema_mod.SCHEMA_VERSION_STRING,
         "analysis": payload,
     })
+
+
+@app.patch("/api/v1/jobs/{job_id}/correct")
+def correct_chord(job_id: str, payload: dict) -> JSONResponse:
+    """Correction interface (roadmap step 3): the musician fixes a label.
+
+    Body: {"index": int, "new_symbol": "Fmaj7/A", "note": optional}.
+    The correction is validated, applied to the canonical document (which is
+    re-validated against the frozen schema — a correction may change labels,
+    never the schema), persisted to analysis.json, and reflected on the job
+    so the next /analysis GET serves the corrected truth.
+    """
+    job = JOBS.get(job_id)
+    if job is None:
+        raise HTTPException(HTTPStatus.NOT_FOUND, "No such job.")
+    if job.result is None:
+        raise HTTPException(HTTPStatus.CONFLICT,
+                            f"Analysis not ready (stage: {job.stage}).")
+    try:
+        index = int(payload.get("index"))
+    except (TypeError, ValueError):
+        raise HTTPException(HTTPStatus.UNPROCESSABLE_ENTITY,
+                            "'index' must be an integer chord position.")
+    new_symbol = str(payload.get("new_symbol") or "").strip()
+    if not new_symbol:
+        raise HTTPException(HTTPStatus.UNPROCESSABLE_ENTITY,
+                            "'new_symbol' is required (e.g. 'Fmaj7/A').")
+
+    doc = json.loads(report.json_report(job.result))
+    original = doc["chords"][index]["chord"] if 0 <= index < len(doc["chords"]) \
+        else None
+    correction = ChordCorrection(index=index, original_symbol=original or "",
+                                 new_symbol=new_symbol,
+                                 note=payload.get("note"))
+    try:
+        apply_correction(doc, correction)
+    except ValueError as exc:
+        raise HTTPException(HTTPStatus.UNPROCESSABLE_ENTITY, str(exc))
+    job.corrections.append(correction)
+
+    # Persist the corrected artifact and mark the in-memory model so later
+    # renders/reports carry the human label.
+    if job.work_dir is not None:
+        try:
+            (job.work_dir / "analysis.json").write_text(json.dumps(doc), encoding="utf-8")
+        except Exception:
+            pass
+    updated = doc["chords"][index]
+    from .models import pc_from_name
+    chord_obj = job.result.chords[index]
+    chord_obj.root_pc = pc_from_name(updated["root"])
+    chord_obj.quality = updated["quality"]
+    chord_obj.bass_pc = (pc_from_name(updated["bass"])
+                         if updated["bass"] else None)
+    chord_obj.inversion = updated["inversion"]
+    # inversion_name is derived from inversion on the model — nothing to set.
+    chord_obj.human_corrected = True
+
+    return JSONResponse({
+        "ok": True,
+        "chord": updated,
+        "n_corrections": len(job.corrections),
+        "dataset_case": to_dataset_case(job_id, doc, job.corrections,
+                                        source=job.result.source),
+    })
+
+
+@app.get("/api/v1/jobs/{job_id}/corrections")
+def get_corrections(job_id: str) -> dict:
+    """Correction log for one job, with its derived ground-truth case."""
+    job = JOBS.get(job_id)
+    if job is None:
+        raise HTTPException(HTTPStatus.NOT_FOUND, "No such job.")
+    doc = json.loads(report.json_report(job.result)) if job.result else {}
+    return {
+        "job_id": job_id,
+        "corrections": [
+            {"index": c.index, "original": c.original_symbol,
+             "new": c.new_symbol, "at": c.corrected_at, "note": c.note}
+            for c in job.corrections
+        ],
+        "dataset_case": (to_dataset_case(job_id, doc, job.corrections,
+                                         source=job.result.source)
+                         if job.result and job.corrections else None),
+    }
 
 
 def main() -> None:

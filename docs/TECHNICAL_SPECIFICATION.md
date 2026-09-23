@@ -506,15 +506,16 @@ adding manifest rows, not building tooling.
 
 ## 25. Testing strategy ✅
 
-71 tests across nine suites (`tests/`): chord decoding (synthetic chroma),
+79 tests across ten suites (`tests/`): chord decoding (synthetic chroma),
 bass/inversion gates, function/roman logic, rhythm (synthetic click track +
 meter), server (upload → poll → player via TestClient), end-to-end (synthesized
 multi-chord audio through the whole pipeline), schema contract (step 20),
-trust engines (step 19), and the evaluation harness (step 25). What each
-suite guarantees: [TESTING.md](TESTING.md). Remaining gap: 🟡 no golden-file
-test on a real-mix fixture. Closed: performance-regression budget (< 3×
-realtime) and CI — `.github/workflows/ci.yml` runs the full suite on every
-push/PR to `main` plus offline eval + CLI smoke checks.
+trust engines (step 19), the evaluation harness (step 25), and the benchmark
+harness (step 28). What each suite guarantees: [TESTING.md](TESTING.md).
+Remaining gap: 🟡 no golden-file test on a real-mix fixture. Closed:
+performance-regression budget (< 3× realtime) and CI —
+`.github/workflows/ci.yml` runs the full suite on every push/PR to `main`
+plus offline eval + CLI smoke checks.
 
 ## 26. Security 🔴 (hardening) / 🟡 (baseline)
 
@@ -541,16 +542,24 @@ git-ignored and must stay out of any distribution.
 
 # F. Business
 
-## 28. Cost model 💡 (estimates, not measurements)
+## 28. Cost model ✅ (measured 2026-09, step 28)
 
-- **Local use:** cost ≈ 0 (user's CPU; ~30–60 s per song, single core-ish).
-- **Hosted per analysis (est.):** CPU-bound analysis ~0.5–1 core-minute;
-  yt-dlp egress (audio download ~3–10 MB); storage ~75 MB wav (or ~9 MB m4a)
-  per retained player + 0.4 MB HTML. At typical cloud CPU pricing this is
-  cents per analysis; the dominant real cost is **storage retention** of audio
-  for player playback — mitigate with short audio TTL and on-demand re-fetch.
-- **Scale risk:** yt-dlp against YouTube ToS at commercial scale; a licensed
-  catalog source is the sanctioned path (ties into §27).
+Measured by `harmony/benchmark.py` (`harmony-bench`), computed and documented
+in [BUSINESS.md](BUSINESS.md); architecture decision in
+[ADR-008](ADR/ADR-008-local-vs-cloud.md). Headlines (6.5-min real mix,
+macOS/4-core): CPU 62 s, wall 70 s (0.18× realtime), peak RSS 1.47 GB
+(memory scales with clip length, not per-minute), artifacts 75 MB WAV +
+0.4 MB streamed player + 0.2 MB analysis doc, ingest 7 s. Cost/analysis:
+**$0 local**, ~$0.0025 serverless, ≤$0.0045 on a $4.5 VPS (~42k analyses/
+month); retention ($0.0017/analysis/month) and delivery egress ($0.0066 per
+full playback) dominate compute for any hosted variant.
+
+**Decision (ADR-008): LOCAL is the architecture** — desktop/CLI stays the
+product; CLOUD stays designed-for (streamed players, v1 API contract, §21
+store sketch) but unimplemented until product demand exists. Revisit
+triggers are recorded in the ADR. Scale risk unchanged: yt-dlp against
+YouTube ToS at commercial scale — a licensed catalog source is the
+sanctioned path (§27).
 
 ## 29. MVP roadmap ✅ / 🟡
 
